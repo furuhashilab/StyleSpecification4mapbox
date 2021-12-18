@@ -8,7 +8,7 @@ Mapbox [スタイル](https://docs.mapbox.com/help/glossary/style/)とは、マ�
 
 - [Mapbox Studio](https://studio.mapbox.com/) を使用せず、手作業でスタイルを書きたい上級デザイナーやカートグラファーの方。
 
-- [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/) または [Mapbox Maps SDK for Android](Mapbox Maps SDK for Android) を用いて地図を開発するエンジニア。
+- [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/) または Mapbox Maps SDK for Androidを用いて地図を開発するエンジニア。
 
 - Mapboxスタイルを生成または処理するソフトウェアの作者。
 
