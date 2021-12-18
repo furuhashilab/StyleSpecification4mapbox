@@ -139,4 +139,6 @@ The projection the map should be rendered in. Suported projections are Albers, E
 Optional [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string).
 
 A base URL for retrieving the sprite image and metadata. The extensions ```.png```, ```.json``` and scale factor ```@2x.png``` will be automatically appended. This property is required if any layer uses the ```background-pattern```, ```fill-pattern```, ```line-pattern```, ```fill-extrusion-pattern```, or ```icon-image``` properties. The URL must be absolute, containing the [scheme, authority and path components](https://en.wikipedia.org/wiki/URL#Syntax).
-```"sprite": "mapbox://sprites/mapbox/bright-v8"```
+```
+"sprite": "mapbox://sprites/mapbox/bright-v8"
+```
