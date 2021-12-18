@@ -106,6 +106,7 @@ Layer to use from a vector tile source. Required for vector tile sources; prohib
 Layers have two sub-properties that determine how data from that layer is rendered: layout and paint properties.
 
 • Layout properties appear in the layer's "layout" object. They are applied early in the rendering process and define how data for that layer is passed to the GPU. Changes to a layout property require an asynchronous "layout" step.
+
 • Paint properties are applied later in the rendering process. Paint properties appear in the layer's "paint" object. Changes to a paint property are cheap and happen synchronously.
 
 
