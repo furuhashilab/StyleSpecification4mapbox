@@ -268,7 +268,7 @@ TileJSON リソースへの URL。サポートされている通信プロトコ�
 
 # [geojson](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Not%20yet%20supported-,geojson,-A%20GeoJSON%20source)
 
-データは URL またはインライン GeoJSON 形式のでーたプロパティで提供されなければなりません。
+データは URL またはインライン GeoJSON 形式のデータプロパティで提供されなければなりません。
 
 ```
 "geojson-marker": {
