@@ -188,6 +188,167 @@ TileJSONリソースへのURL。サポートされている通信プロトコル
 }   
 ```   
 
+|  SDK Support |  Mapbox GL JS  |  Android SDK  |  iOS SDK | macOS SDK  |
+| ---- | ---- | ---- | ---- | ---- |
+|  基本設定通り  |  >= 0.43.0  |  サポートされていません |  サポートされていません  |  サポートされていません  |   
+
+### [attribution](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Not%20yet%20supported-,attribution,-Optional%20string.)   
+
+ [オプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)   
+マップがユーザーに表示されるときに表示される属性を記載します。   
+
+### [bounds](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-bounds)   
+[オプションの数値の配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)デフォルトは 「-180,-85.051129,180,85.051129」で設定されています。   
+
+ソースの[バウンディングボックス](https://wiki.openstreetmap.org/wiki/JA:Bounding_Box)の南西および北東の角の経度と緯度を、以下の順序で設定します。[sw.lng, sw.lat, ne.lng, ne.lat]。このプロパティがソースに含まれている場合、指定した境界の外側のタイルは Mapbox GL によって要求されません。   
+
+### [encoding](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-dem-encoding)   
+[オプションの列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Optional-,enum,-.%20One%20of%20%22terrarium)。terrarium", "mapbox "のいずれかを選択可能。デフォルトは "mapbox" 。   
+エンコーディングする際に使われるソース。デフォルトでは Mapbox Terrain RGB が使用されます。   
+
+- "terrarium"   
+Terrarium形式のPNGタイル。詳しくは [こちら](https://aws.amazon.com/es/public-datasets/terrain/ )を参照してください。   
+
+- "mapbox"   
+Mapbox 地形 RGB タイル。詳しくは[こちら](https://www.mapbox.com/help/access-elevation-data/#mapbox-terrain-rgb)を参照してください。   
+
+### [maxzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-dem-maxzoom)   
+[オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは22。   
+
+タイルが利用可能な最大ズームレベル。maxzoomのタイルからのデータは、より高いズームレベルでマップを表示する際に使用される。   
+
+### [minzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-dem-minzoom)   
+[オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは0。   
+TileJSON 仕様と同様に、タイルが利用可能な最小ズームレベル。    
+
+### [tiles](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-dem-tiles)   
+[オプションの文字列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)。[オプションの配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)   
+
+TileJSON 仕様と同様に、ひとつあるいは複数のタイルソース URL の配列。  
+
+### [tileSize](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-dem-tileSize)   
+[オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。単位はピクセル。デフォルトは512。   
+レイヤーのタイルを表示するための最小視覚サイズ。ラスターレイヤーに対してのみ設定可能。   
+
+
+### [url](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-dem-url)   
+[オプションの文字列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)      
+TileJSONリソースへのURL。サポートされている通信プロトコルは、http:、https:、および mapbox://<"TilesetID">。   
+
+### [volatile](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-dem-volatile)   
+[オプションのブール値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalse。   
+ソースのタイルをローカルにキャッシュするかどうかを決定するための設定。   
+|  SDK Support |  Mapbox GL JS  |  Android SDK  |  iOS SDK | macOS SDK  |
+| ---- | ---- | ---- | ---- | ---- |
+|  基本設定通り  |  サポートされていません  |  >= 9.3.0 |  >= 5.10.0  |  サポートされていません  |    
+
+
+# [geojson](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Not%20yet%20supported-,geojson,-A%20GeoJSON%20source)   
+データは URL またはインライン GeoJSON 形式のでーたプロパティで提供されなければなりません。   
+
+```
+"geojson-marker": {
+    "type": "geojson",
+    "data": {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.0323, 38.9131]
+        },
+        "properties": {
+            "title": "Mapbox DC",
+            "marker-symbol": "monument"
+        }
+    }
+}   
+```   
+
+この GeoJSON ソースの例では、URL を介して外部の GeoJSON ドキュメントを参照しています。GeoJSON ドキュメントは、同じドメイン上にあるか、[CORS](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=or%20accessible%20using-,CORS,-.)を使用してアクセスする必要があります。   
+
+```
+"geojson-lines": {
+    "type": "geojson",
+    "data": "./lines.geojson"
+}   
+```   
+
+|  SDK Support |  Mapbox GL JS  |  Android SDK  |  iOS SDK | macOS SDK  |
+| ---- | ---- | ---- | ---- | ---- |
+|  基本設定通り  |  >= 0.10.0  |  >= 2.0.1 |  >= 2.0.0  |  >= 0.1.0  |   
+|  クラスタリング  |  >= 0.14.0  |  >= 4.2.0 |  >= 3.4.0  |  >= 0.3.0  | 
+|  line distance metrics  |  >= 0.45.0  |  >= 6.5.0 |  >= 4.4.0  |  >= 0.11.0  |    
+
+### [attribution](hhttps://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=%3E%3D%200.11.0-,attribution,-Optional%20string.)   
+
+ [オプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)   
+マップがユーザーに表示されるときに表示される属性を記載します。   
+
+### [buffer](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=to%20a%20user.-,buffer,-Optional%20number%20between)   
+[オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Optional-,number,-between%200%20and)   
+0から512までの数字。デフォルトは128。   
+
+各辺のタイルバッファのサイズ。値0はバッファを生成しません。512の値は、タイル自体の幅と同じバッファを生成します。大きな値を設定すると、タイルのエッジ付近のレンダリングアーチファクトが減少し、パフォーマンスが低下します。   
+
+### [cluster](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#geojson-cluster)   
+[オプションのブール値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalse。   
+
+データがポイントフィーチャーのコレクションである場合、これを true に設定すると、ポイントがグループに半径でクラスタリングされます。クラスター グループは、追加のプロパティを持つソース内の新しいポイント フィーチャーになります。   
+
+- cluster   
+点がクラスタである場合はtrueになります。   
+- cluster_id   
+クラスタ検査メソッドで使用するクラスタのユニークな ID    
+- point_count   
+このクラスタにグループ化された元の点の数   
+- point_count_abbreviated   
+省略された点数   
+
+### [clusterMaxZoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#geojson-clusterMaxZoom)   
+[オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)   
+クラスタリングが有効な場合、ポイントをクラスタリングする最大ズームレベル。デフォルトはmaxzoomより1ズーム小さく設定される（最後のズームフィーチャーがクラスタリングされないため）。クラスタは整数倍のズームレベルで設定されるので例えば、clusterMaxZoom を 14 に設定すると、ズームレベル15 までクラスタが表示されることになる。   
+
+### [clusterProperties](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Defaults%20to%202.-,clusterProperties,-Optional.)   
+クラスタリングが有効な場合に、クラスタ化されたポイントからの値を集約して、生成されたクラスタにカスタムプロパティを定義するオブジェクト。形式は{"property_name": [operator, map_expression]}。operatorは、少なくとも2つのオペランド（例えば、"+"や "max"）が使用できる任意の式関数で、クラスタが含むクラスタ/ポイントからプロパティ値を蓄積します。   
+
+- 例) {"sum": ["+", ["get", "scalerank"]]}.   
+
+より高度なユースケースでは、operator の代わりに、特別な 「"accumulated"」値を参照するカスタム reduce 式を使用することができます。   
+
+- 例) ["accumulated"] value, e.g.: {"sum": [["+", ["accumulated"], ["get", "sum"]], ["get", "scalerank"]]}   
+
+### [clusterRadius](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#geojson-clusterRadius)    
+0以上の数値[オプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Optional-,number,-greater%20than%20or)。デフォルトは50。
+クラスタリングが有効な場合の各クラスタの半径。値512は、タイルの幅に等しい半径を示します。   
+
+### [data](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#geojson-data)   
+設定は任意。    
+GeoJSON ファイルへの URL、またはインライン GeoJSON。   
+
+### [filter](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#geojson-filter)   
+設定は任意。   
+レンダリングのために処理する前に、フィーチャーをフィルタリングするためのもの。  
+
+### [generateId](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=them%20for%20rendering.-,generateId,-Optional%20boolean.%20Defaults)   
+[オプションのブール値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalse。   
+geojsonフィーチャーのidを生成するかどうかの設定。有効であると、feature.id プロパティは features 配列内のインデックスに基づいて自動的に割り当てられ、以前の値を上書きします。   
+
+### [lineMetrics](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#geojson-lineMetrics)   
+[オプションのブール値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalse。   
+線分距離メトリクスを計算するかどうか。これは、線勾配値を指定するラインレイヤに必要です。   
+
+### [maxzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=line%2Dgradient%20values.-,maxzoom,-Optional%20number.%20Defaults)   
+[オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Optional-,number,-.%20Defaults%20to%2018)。 デフォルトは18。   
+ベクタータイルを作成する際の最大ズームレベル（高いほど高倍率でより詳細に表示される）。   
+
+### [promoteId] (https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=high%20zoom%20levels).-,promoteId,-Optional%20promoteId.)   
+[オプションのpromoteId](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#promoteId)   
+フィーチャーIDとして使用するプロパティ（フィーチャー状態用）。プロパティ名、または {<sourceLayer>.Object> 形式のオブジェクトのどちらかで記述する。( 「{<propertyName>}」の形のオブジェクト。  
+
+### [tolerance](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#geojson-tolerance)   
+[オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは 0.375 。   
+Douglas-Peucker simplification tolerance (高いほどジオメトリが単純になり、パフォーマンスが速くなる)。   
+
+
 
 
 
