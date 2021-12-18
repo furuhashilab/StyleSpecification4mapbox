@@ -1,5 +1,116 @@
 ## 日本語
 
+# レイヤー
+スタイルのレイヤー プロパティには、そのスタイルで使用できるすべてのレイヤーが一覧表示されます。レイヤーの種類は type 属性で指定し、background、fill、line、symbol、raster、circle、fill-extrusion、heatmap、hillsshade、sky のいずれかを指定する必要があります。
+
+background または sky タイプのレイヤーを除いて、各レイヤーはソースを参照する必要があります。レイヤーは[ソース](https://docs.mapbox.com/help/glossary/source/)から取得したデータを受け取り、オプションでフィーチャーをフィルタリングし、それらのフィーチャーがどのようにスタイリングされるかを定義します。
+
+以下は、[スタイル](https://docs.mapbox.com/help/glossary/style/)に含まれる可能性のあるレイヤーオブジェクトの例です。
+```
+"layers": [
+  {
+    "id": "water",
+    "source": "mapbox-streets",
+    "source-layer": "water",
+    "type": "fill",
+    "paint": {
+      "fill-color": "#00ffff"
+    }
+  }
+]
+```
+## [レイヤープロパティ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layer-properties))
+### [id](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#id)
+
+必須の[文字列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)です。
+
+一意なレイヤー名です。
+
+### [タイプ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#type)
+[列挙](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)は必須です。fill", "line", "symbol", "circle", "heatmap", "fill-extrusion", "raster", "hillshade", "background", "sky "のいずれか。
+
+このレイヤーのレンダリングタイプ。
+
+"fill":
+塗りつぶされた多角形で、オプションで描画された境界線があります。
+
+"line"：
+描画された線。
+
+"symbol":
+アイコンまたはテキストラベル。
+
+"circle":
+塗りつぶした円。
+
+"heatmap": 
+ヒートマップ。
+
+"fill-extrusion":
+押し出し（3D）ポリゴン。
+
+"ラスター": 
+衛星画像などのラスターマップテクスチャ。
+
+"hillsshade"：
+DEMデータに基づくクライアントサイドのヒルシェード視覚化。現在のところ、Mapbox Terrain RGB と Mapzen Terrarium タイルのみをサポートする実装になっています。
+
+"background"（背景）：
+マップの背景色またはパターン。
+
+"sky":
+マップを囲む球状のドームで、常に他のすべてのレイヤーの後ろにレンダリングされます。
+
+### [フィルター](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#filter)
+オプションの[表現](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/)
+
+ソースフィーチャーに対する条件を指定する式。フィルタに一致するフィーチャーのみが表示される。フィルタに含まれるズーム式は、整数のズームレベルにおいてのみ評価される。フィルター式では ["feature-state", ...] 式はサポートされていません。ピッチ] および [中心からの距離] 式は、シンボル レイヤーのフィルター式でのみサポートされています。
+
+レイアウト
+オプションでレイアウトを指定します。
+
+レイヤーのレイアウトプロパティ。
+
+maxzoom
+0から24までの数字（オプション）。
+
+レイヤーの最大ズームレベル。maxzoomと同じかそれ以上のズームレベルでは、レイヤーは非表示になります。
+
+メタデータ
+任意。
+
+レイヤーを追跡するのに便利な任意のプロパティですが、レンダリングに影響を与えるものではありません。プロパティは 'mapbox:' のように、衝突を避けるためにプレフィックスを付ける必要があります。
+
+minzoom
+0から24までの数字（オプション）。
+
+レイヤーの最小ズームレベル。minzoomより小さいズームレベルでは、レイヤーは隠されます。
+
+ペイント
+オプションでペイントを指定します。
+
+このレイヤーのデフォルトのペイントプロパティ。
+
+ソース
+オプションの文字列。
+
+このレイヤーに使用されるソース記述の名前。背景を除くすべてのレイヤーの種類で必要です。
+
+ソースレイヤー
+オプションの文字列。
+
+ベクタータイルソースから使用するレイヤー。ベクトル タイル ソースでは必須、GeoJSON ソースを含む他のすべてのソース タイプでは禁止です。
+
+レイヤーのサブプロパティ
+レイヤーには、そのレイヤーからのデータのレンダリング方法を決定する2つのサブプロパティがあります：レイアウトとペイントプロパティです。
+
+- レイアウトプロパティは、レイヤーの "レイアウト" オブジェクトに表示されます。レイアウトプロパティはレンダリング処理の初期に適用され、そのレイヤーのデータが GPU にどのように渡されるかを定義します。レイアウトプロパティを変更するには、非同期の「レイアウト」手順が必要です。
+
+- ペイントプロパティはレンダリングプロセスの後半に適用されます。ペイントプロパティはレイヤーの "ペイント" オブジェクトに表示されます。ペイントプロパティへの変更は安価で、同期的に行われます。
+
+
+
+
 ## 原文
 
 # Layers
