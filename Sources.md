@@ -35,7 +35,7 @@
 }
 ```
 
-- タイル型データのソースとして EPSG:3857（または EPSG:900913）をサポートする WMS サーバーへの URL を提供する方法。サーバーの URL には、bbox パラメータを供給するための「{box-epsg-3857}」置換トークンを含める必要があります。
+- タイル型データのソースとして EPSG:3857（または EPSG:900913）をサポートする WMS サーバーへの URL を提供する方法。サーバーの URL には、box パラメータを供給するための「{box-epsg-3857}」置換トークンを含める必要があります。
 
 ```
 "wms-imagery": {
@@ -90,7 +90,7 @@ TileJSON 仕様と同様に、タイルが利用可能な最小ズームレベ�
 フィーチャーの ID として使用するプロパティ（フィーチャー状態用）。プロパティ名、または {<sourceLayer>.Object> }形式のオブジェクトのどちらかです。
 ベクトル タイル ソースに対して文字列として指定した場合、すべてのソース レイヤーで同じプロパティが使用されます。
 
-### [scheme] (https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=its%20source%20layers.-,scheme,-Optional%20enum.%20One)
+### [scheme](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=its%20source%20layers.-,scheme,-Optional%20enum.%20One)
 
 [オプションの列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。xyz", "tms "のうちの 1 つ。デフォルトは "xyz"。  
 タイル座標の y 方向に影響する。グローバルメルカトル（別名球面メルカトル）プロファイルが想定されている。
@@ -158,7 +158,7 @@ Mapbox がホストするラスタータイルの場合、"url" 値は mapbox://
 [オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは 0。  
 TileJSON 仕様と同様に、タイルが利用可能な最小ズームレベル。
 
-### [scheme] (https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=the%20TileJSON%20spec.-,scheme,-Optional%20enum.%20One)
+### [scheme](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=the%20TileJSON%20spec.-,scheme,-Optional%20enum.%20One)
 
 [オプションの列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。xyz", "tms "のうちの 1 つ。デフォルトは "xyz"。  
 タイル座標の y 方向に影響する。グローバルメルカトル（別名球面メルカトル）プロファイルが想定されている。
@@ -301,7 +301,7 @@ TileJSON リソースへの URL。サポートされている通信プロトコ�
 | クラスタリング        | >= 0.14.0    | >= 4.2.0    | >= 3.4.0 | >= 0.3.0  |
 | line distance metrics | >= 0.45.0    | >= 6.5.0    | >= 4.4.0 | >= 0.11.0 |
 
-### [attribution](hhttps://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=%3E%3D%200.11.0-,attribution,-Optional%20string.)
+### [attribution](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=%3E%3D%200.11.0-,attribution,-Optional%20string.)
 
 [オプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)  
 マップがユーザーに表示されるときに表示される属性を記載します。
@@ -373,7 +373,7 @@ geojson フィーチャーの id を生成するかどうかの設定。有効�
 [オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Optional-,number,-.%20Defaults%20to%2018)。 デフォルトは 18。  
 ベクタータイルを作成する際の最大ズームレベル（高いほど高倍率でより詳細に表示される）。
 
-### [promoteId] (https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=high%20zoom%20levels).-,promoteId,-Optional%20promoteId.)
+### [promoteId](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=high%20zoom%20levels).-,promoteId,-Optional%20promoteId.)
 
 [オプションの promoteId](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#promoteId)  
 フィーチャー ID として使用するプロパティ（フィーチャー状態用）。プロパティ名、または {<sourceLayer>.Object> 形式のオブジェクトのどちらかで記述する。( 「{<propertyName>}」の形のオブジェクト)。
@@ -383,7 +383,7 @@ geojson フィーチャーの id を生成するかどうかの設定。有効�
 [オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは 0.375 。  
 Douglas-Peucker simplification tolerance (高いほどジオメトリが単純になり、パフォーマンスが速くなる)。
 
-# [image](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=and%20faster%20performance).-,image,-An%20image%20source)
+# [image](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#image)   
 
 url "の値には画像の位置が含まれます。  
 座標"配列には、左上、右上、右下、左下の時計回りに並んだ画像端の [経度, 緯度] のペアを記述します。
