@@ -86,7 +86,9 @@ A global effect that fades layers and markers based on their distance to the cam
 Optional [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string).
 
 A URL template for loading signed-distance-field glyph sets in PBF format. The URL must include ```{fontstack} ```and ```{range} ```tokens. This property is required if any layer uses the ```text-field``` layout property. The URL must be absolute, containing the [scheme, authority and path components](https://en.wikipedia.org/wiki/URL#Syntax).
-```"glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf"```
+```
+"glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf"
+```
 
 ## [light](https://docs.mapbox.com/mapbox-gl-js/style-spec/root/#light)
 Optional [light](https://docs.mapbox.com/mapbox-gl-js/style-spec/light/).
@@ -141,4 +143,28 @@ Optional [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)
 A base URL for retrieving the sprite image and metadata. The extensions ```.png```, ```.json``` and scale factor ```@2x.png``` will be automatically appended. This property is required if any layer uses the ```background-pattern```, ```fill-pattern```, ```line-pattern```, ```fill-extrusion-pattern```, or ```icon-image``` properties. The URL must be absolute, containing the [scheme, authority and path components](https://en.wikipedia.org/wiki/URL#Syntax).
 ```
 "sprite": "mapbox://sprites/mapbox/bright-v8"
+```
+
+## [terrain](https://docs.mapbox.com/mapbox-gl-js/style-spec/root/#terrain)
+Optional [terrain](https://docs.mapbox.com/mapbox-gl-js/style-spec/terrain/).
+
+A global modifier that elevates layers and markers based on a DEM data source.
+
+## [transition](https://docs.mapbox.com/mapbox-gl-js/style-spec/root/#transition)
+Optional [transition](https://docs.mapbox.com/mapbox-gl-js/style-spec/transition/).
+
+A global transition definition to use as a default across properties, to be used for timing transitions between one value and the next when no property-specific transition is set. Collision-based symbol fading is controlled independently of the style's ```transition``` property.
+```
+"transition": {
+  "duration": 300,
+  "delay": 0
+}
+```
+
+## [zoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/root/#zoom)
+Optional [number](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number).
+
+Default zoom level. The style zoom will be used only if the map has not been positioned by other means (e.g. map options or user interaction).
+```
+"zoom": 12.5
 ```
