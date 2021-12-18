@@ -19,7 +19,7 @@ background または sky タイプのレイヤーを除いて、各レイヤー�
   }
 ]
 ```
-## [レイヤープロパティ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layer-properties))
+## [レイヤープロパティ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layer-properties)
 ### [id](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#id)
 
 必須の[文字列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)です。
@@ -62,51 +62,51 @@ DEMデータに基づくクライアントサイドのヒルシェード視覚�
 マップを囲む球状のドームで、常に他のすべてのレイヤーの後ろにレンダリングされます。
 
 ### [フィルター](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#filter)
-オプションの[表現](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/)
+オプションの[式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/)
 
 ソースフィーチャーに対する条件を指定する式。フィルタに一致するフィーチャーのみが表示される。フィルタに含まれるズーム式は、整数のズームレベルにおいてのみ評価される。フィルター式では ["feature-state", ...] 式はサポートされていません。ピッチ] および [中心からの距離] 式は、シンボル レイヤーのフィルター式でのみサポートされています。
 
-レイアウト
+### [レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout)
 オプションでレイアウトを指定します。
 
 レイヤーのレイアウトプロパティ。
 
-maxzoom
-0から24までの数字（オプション）。
+### [maxzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#maxzoom)
+0から24までの[数字](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)
 
 レイヤーの最大ズームレベル。maxzoomと同じかそれ以上のズームレベルでは、レイヤーは非表示になります。
 
-メタデータ
+### [メタデータ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#metadata)
 任意。
 
 レイヤーを追跡するのに便利な任意のプロパティですが、レンダリングに影響を与えるものではありません。プロパティは 'mapbox:' のように、衝突を避けるためにプレフィックスを付ける必要があります。
 
-minzoom
+### [minzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#minzoom)
 0から24までの数字（オプション）。
 
 レイヤーの最小ズームレベル。minzoomより小さいズームレベルでは、レイヤーは隠されます。
 
-ペイント
-オプションでペイントを指定します。
+### [ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint)
+オプションで[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)を指定します。
 
 このレイヤーのデフォルトのペイントプロパティ。
 
-ソース
-オプションの文字列。
+### [ソース](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#source)
+オプションの[文字列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)
 
 このレイヤーに使用されるソース記述の名前。背景を除くすべてのレイヤーの種類で必要です。
 
-ソースレイヤー
-オプションの文字列。
+### [ソースレイヤー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#source-layer)
+オプションの[文字列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)
 
-ベクタータイルソースから使用するレイヤー。ベクトル タイル ソースでは必須、GeoJSON ソースを含む他のすべてのソース タイプでは禁止です。
+ベクタータイルソースから使用するレイヤー。ベクトルタイルソースでは必須、GeoJSON ソースを含む他のすべてのソース タイプでは禁止です。
 
-レイヤーのサブプロパティ
-レイヤーには、そのレイヤーからのデータのレンダリング方法を決定する2つのサブプロパティがあります：レイアウトとペイントプロパティです。
+## [レイヤーのサブプロパティ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layer-sub-properties)
+レイヤーには、そのレイヤーからのデータのレンダリング方法を決定する2つのサブプロパティがあります。レイアウトとペイントプロパティです。
 
-- レイアウトプロパティは、レイヤーの "レイアウト" オブジェクトに表示されます。レイアウトプロパティはレンダリング処理の初期に適用され、そのレイヤーのデータが GPU にどのように渡されるかを定義します。レイアウトプロパティを変更するには、非同期の「レイアウト」手順が必要です。
+• レイアウトプロパティは、レイヤーの "レイアウト" オブジェクトに表示されます。レイアウトプロパティはレンダリング処理の初期に適用され、そのレイヤーのデータが GPU にどのように渡されるかを定義します。レイアウトプロパティを変更するには、非同期の「レイアウト」手順が必要です。
 
-- ペイントプロパティはレンダリングプロセスの後半に適用されます。ペイントプロパティはレイヤーの "ペイント" オブジェクトに表示されます。ペイントプロパティへの変更は安価で、同期的に行われます。
+• ペイントプロパティはレンダリングプロセスの後半に適用されます。ペイントプロパティはレイヤーの "ペイント" オブジェクトに表示されます。ペイントプロパティへの変更は安価で、同期的に行われます。
 
 
 
