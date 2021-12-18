@@ -27,8 +27,9 @@ Here is an example layers object which could be included in a [style](https://do
 Required [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string).
 Unique layer name.
 
-## type
-Required enum. One of "fill", "line", "symbol", "circle", "heatmap", "fill-extrusion", "raster", "hillshade", "background", "sky".
+### type
+Required [enum](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum). One of "fill", "line", "symbol", "circle", "heatmap", "fill-extrusion", "raster", "hillshade", "background", "sky".
+
 Rendering type of this layer.
 
 "fill":
@@ -61,43 +62,50 @@ The background color or pattern of the map.
 "sky":
 A spherical dome around the map that is always rendered behind all other layers.
 
-## filter
-Optional expression.
+### filter
+Optional [expression](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/).
+
 An expression specifying conditions on source features. Only features that match the filter are displayed. Zoom expressions in filters are only evaluated at integer zoom levels. The ["feature-state", ...] expression is not supported in filter expressions. The ["pitch"] and ["distance-from-center"] expressions are supported only for filter expressions on the symbol layer.
 
-## layout
-Optional layout.
+### layout
+Optional [layout](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property).
+
 Layout properties for the layer.
 
-## maxzoom
-Optional number between 0 and 24 inclusive.
+### maxzoom
+Optional [number](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number) between 0 and 24 inclusive.
+
 The maximum zoom level for the layer. At zoom levels equal to or greater than the maxzoom, the layer will be hidden.
 
-## metadata
+### metadata
 Optional.
+
 Arbitrary properties useful to track with the layer, but do not influence rendering. Properties should be prefixed to avoid collisions, like 'mapbox:'.
 
-## minzoom
+### minzoom
 Optional number between 0 and 24 inclusive.
+
 The minimum zoom level for the layer. At zoom levels less than the minzoom, the layer will be hidden.
 
-## paint
-Optional paint.
+### paint
+Optional [paint](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property).
+
 Default paint properties for this layer.
 
-## source
-Optional string.
+### source
+Optional [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string).
+
 Name of a source description to be used for this layer. Required for all layer types except background.
 
-## source-layer
-Optional string.
+### source-layer
+Optional [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string).
+
 Layer to use from a vector tile source. Required for vector tile sources; prohibited for all other source types, including GeoJSON sources.
 
-# Layer sub-properties
+## Layer sub-properties
 Layers have two sub-properties that determine how data from that layer is rendered: layout and paint properties.
 
-Layout properties appear in the layer's "layout" object. They are applied early in the rendering process and define how data for that layer is passed to the GPU. Changes to a layout property require an asynchronous "layout" step.
-
-Paint properties are applied later in the rendering process. Paint properties appear in the layer's "paint" object. Changes to a paint property are cheap and happen synchronously.
+• Layout properties appear in the layer's "layout" object. They are applied early in the rendering process and define how data for that layer is passed to the GPU. Changes to a layout property require an asynchronous "layout" step.
+• Paint properties are applied later in the rendering process. Paint properties appear in the layer's "paint" object. Changes to a paint property are cheap and happen synchronously.
 
 
