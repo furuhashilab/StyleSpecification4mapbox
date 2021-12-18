@@ -71,7 +71,7 @@ DEMデータに基づくクライアントサイドのヒルシェード視覚�
 
 レイヤーのレイアウトプロパティ。
 
-### [maxzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#maxzoom)
+### [最大ズーム](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#maxzoom)
 0から24までの[数字](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)
 
 レイヤーの最大ズームレベル。maxzoomと同じかそれ以上のズームレベルでは、レイヤーは非表示になります。
@@ -81,7 +81,7 @@ DEMデータに基づくクライアントサイドのヒルシェード視覚�
 
 レイヤーを追跡するのに便利な任意のプロパティですが、レンダリングに影響を与えるものではありません。プロパティは 'mapbox:' のように、衝突を避けるためにプレフィックスを付ける必要があります。
 
-### [minzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#minzoom)
+### [最小ズーム](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#minzoom)
 0から24までの数字（オプション）。
 
 レイヤーの最小ズームレベル。minzoomより小さいズームレベルでは、レイヤーは隠されます。
