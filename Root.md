@@ -58,6 +58,7 @@ Style specification version number. Must be 8.
 
 ## [bearing](https://docs.mapbox.com/mapbox-gl-js/style-spec/root/?fbclid=IwAR0NUepnn4i-OW34EZ54LHmtel9cBS9pweaT3o1KsHkbCit_sKf4B14vltM#bearing)
 Optional [number](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number). Units in degrees. Defaults to 0.
+
 Default bearing, in degrees. The bearing is the compass direction that is "up"; for example, a bearing of 90° orients the map so that east is up. This value will be used only if the map has not been positioned by other means (e.g. map options or user interaction).
 ```
 "bearing": 29
