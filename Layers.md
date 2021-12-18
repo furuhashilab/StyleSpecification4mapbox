@@ -6,9 +6,9 @@
 
 A style's layers property lists all the layers available in that style. The type of layer is specified by the "type" property, and must be one of background, fill, line, symbol, raster, circle, fill-extrusion, heatmap, hillshade, sky.
 
-Except for layers of the background or sky types, each layer must refer to a source. Layers take the data that they get from a source, optionally filter features, and then define how those features are styled.
+Except for layers of the background or sky types, each layer must refer to a source. Layers take the data that they get from a [source](https://docs.mapbox.com/help/glossary/source/), optionally filter features, and then define how those features are styled.
 
-Here is an example layers object which could be included in a style:
+Here is an example layers object which could be included in a [style](https://docs.mapbox.com/help/glossary/style/):
 ```
 "layers": [
   {
