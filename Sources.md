@@ -2,7 +2,7 @@
 
 # Sources
 
-マップまたはレイヤーのソースは、マップがどのデータを表示すべきかを指定します。ソースの種類は "type" プロパティで指定し、vector, raster, raster-dem, geojson, image, video のいずれかである必要があります。
+ソース（Sources）は、マップ表示するデータのことを指します。ソースの種類は "type" プロパティで指定し、vector, raster, raster-dem, geojson, image, video のいずれかである必要があります。
 
 [ソース](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=A-,source,-provides%20map%20data)は地図データを提供し、Mapbox GL JS の[スタイル](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=can%20use%20with%20a-,style,-document%20to%20render)ドキュメントを使用することにより様々な視覚化表現を行うことができます。スタイルドキュメントで紹介されているユースケースを用いることで高速道路と一般道レイヤーの異なるタイプの道路の外観を区別するなど、同じソースに異なる方法でスタイルを設定することが可能になります。
 
