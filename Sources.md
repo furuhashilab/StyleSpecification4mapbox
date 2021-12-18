@@ -76,7 +76,51 @@
 ### [maxzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#vector-maxzoom)   
 [オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは22。   
 
-タイルが利用可能な最大ズームレベル。maxzoomのタイルからのデータは、より高いズームレベルでマップを表示する際に使用される。
+タイルが利用可能な最大ズームレベル。maxzoomのタイルからのデータは、より高いズームレベルでマップを表示する際に使用される。   
+
+### [minzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#vector-minzoom)   
+[オプションの数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは0。   
+TileJSON 仕様と同様に、タイルが利用可能な最小ズームレベル。   
+
+### [promoteId](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=the%20TileJSON%20spec.-,promoteId,-Optional%20promoteId.)   
+[オプションのpromoteId](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#promoteId)    
+フィーチャーのIDとして使用するプロパティ（フィーチャー状態用）。プロパティ名、または {<sourceLayer>.Object> }形式のオブジェクトのどちらかです。
+ベクトル タイル ソースに対して文字列として指定した場合、すべてのソース レイヤーで同じプロパティが使用されます。   
+
+### [scheme] (https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=its%20source%20layers.-,scheme,-Optional%20enum.%20One)    
+[オプションの列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。xyz", "tms "のうちの1つ。デフォルトは "xyz"。   
+タイル座標の y 方向に影響する。グローバルメルカトル（別名球面メルカトル）プロファイルが想定されている。   
+
+- "xyz":   
+[Slippyマップ](https://wiki.openstreetmap.org/wiki/JA:%E3%82%B9%E3%83%AA%E3%83%83%E3%83%94%E3%83%BC%E3%83%9E%E3%83%83%E3%83%97)のタイル名スキーム。   
+
+- " tms":   
+OSGeo仕様のスキーム   
+
+### [tiles](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#vector-tiles)   
+[オプションの文字列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)。[オプションの配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)   
+
+TileJSON 仕様と同様に、ひとつあるいは複数のタイルソース URL の配列。  
+
+### [url](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#vector-url)   
+[オプションの文字列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)   
+TileJSONリソースへのURL。サポートされている通信プロトコルは、http:、https:、および mapbox://<"TilesetID">。   
+
+### [volatile](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#vector-volatile)   
+[オプションのブール値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalse。   
+ソースのタイルをローカルにキャッシュするかどうかを決定するための設定。   
+
+### 
+
+
+
+
+
+
+
+
+
+
 
 
 
