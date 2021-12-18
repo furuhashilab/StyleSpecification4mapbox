@@ -58,5 +58,10 @@
 }
 ```
 
+|  SDK Support |  Mapbox GL JS  |  Android SDK  |  iOS SDK | macOS SDK  |
+| ---- | ---- | ---- | ---- | ---- |
+|  基本設定通り  |  >= 0.10.0  |  >= 2.0.1  |  >= 2.0.0  |  >= 0.1.0  | 
+
+
 
 
