@@ -2,7 +2,7 @@
 
 ## 原文
 
-## Layers
+# Layers
 
 A style's layers property lists all the layers available in that style. The type of layer is specified by the "type" property, and must be one of background, fill, line, symbol, raster, circle, fill-extrusion, heatmap, hillshade, sky.
 
@@ -23,7 +23,7 @@ Here is an example layers object which could be included in a [style](https://do
 ]
 ```
 ## Layer properties
-## id
+### id
 Required [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string).
 Unique layer name.
 
