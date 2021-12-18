@@ -66,7 +66,7 @@
 ### [attribution](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#vector-attribution)
 
 [オプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)  
-マップがユーザーに表示されるときに表示される属性を記載します。
+マップの帰属を記載してください。
 
 ### [bounds](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#vector-bounds)
 
@@ -140,7 +140,7 @@ Mapbox がホストするラスタータイルの場合、"url" 値は mapbox://
 ### [attribution](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-attribution)
 
 [オプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)  
-マップがユーザーに表示されるときに表示される属性を記載します。
+マップの帰属を記載してください。
 
 ### [bounds](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-bounds)
 
@@ -212,7 +212,7 @@ TileJSON リソースへの URL。サポートされている通信プロトコ�
 ### [attribution](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=Not%20yet%20supported-,attribution,-Optional%20string.)
 
 [オプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)  
-マップがユーザーに表示されるときに表示される属性を記載します。
+マップの帰属を記載してください。
 
 ### [bounds](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#raster-bounds)
 
@@ -305,7 +305,7 @@ TileJSON リソースへの URL。サポートされている通信プロトコ�
 ### [attribution](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=%3E%3D%200.11.0-,attribution,-Optional%20string.)
 
 [オプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)  
-マップがユーザーに表示されるときに表示される属性を記載します。
+マップの帰属を記載してください。
 
 ### [buffer](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=to%20a%20user.-,buffer,-Optional%20number%20between)
 
