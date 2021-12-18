@@ -50,7 +50,7 @@
 
 # [vector](https://docs.mapbox.com/mapbox-gl-js/style-spec/sources/#:~:text=example%22%0A%20%20%20%20%5D%2C%0A%20%20%20%20%22tileSize%22%3A%20256%0A%7D-,vector,-A%20vector%20tile)
 
-タイルは Mapbox Vector Tile 形式である必要があります。ベクタータイルのすべての幾何学座標は、-1 _ extent と (extent _ 2) - 1 の間で設定する必要があります。ベクターソースを使用するすべてのレイヤーは、"source-layer" 値を指定する必要があります。Mapbox によってホストされるベクタータイルの場合、"url "値は "mapbox://tilesetid" の形式でなければなりません。
+タイルは Mapbox Vector Tile 形式である必要があります。ベクタータイルのすべての幾何学座標は、-1 〜 2 の間で設定する必要があります。ベクターソースを使用するすべてのレイヤーは、"source-layer" 値を指定する必要があります。Mapbox によってホストされるベクタータイルの場合、"url "値は "mapbox://tilesetid" の形式でなければなりません。
 
 ```
 "mapbox-streets": {
