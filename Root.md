@@ -20,7 +20,7 @@ Required [array](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array) o
 
 Layers will be drawn in the order of this array.
 
-,,,
+```
 "layers": [
   {
     "id": "water",
@@ -32,4 +32,4 @@ Layers will be drawn in the order of this array.
     }
   }
 ]
-,,,
+```
