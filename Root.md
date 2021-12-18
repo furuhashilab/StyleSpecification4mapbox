@@ -19,6 +19,7 @@ There are some root level properties, including owner and modified, that are not
 Required [array](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array) of [layers](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/).
 
 Layers will be drawn in the order of this array.
+
 "layers": [
   {
     "id": "water",
