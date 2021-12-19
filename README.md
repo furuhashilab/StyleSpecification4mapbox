@@ -1,6 +1,8 @@
 # StyleSpecification4mapbox
 Style Specification Current version: v13.23.0 https://docs.mapbox.com/mapbox-gl-js/style-spec/
 
+※ このレポジトリは [東京都知事杯オープンデータハッカソン「チーム青学」の成果物](https://github.com/furuhashilab/Tochizi-hai-OpenDataHackathon/) として作成しました。
+
 ## [STYLE SPECIFICATION Mapbox GL JS スタイル仕様](https://github.com/furuhashilab/StyleSpecification4mapbox/blob/main/style-spec.md)
 * [Root](https://github.com/furuhashilab/StyleSpecification4mapbox/blob/main/Root.md)
 * [Light](https://github.com/furuhashilab/StyleSpecification4mapbox/blob/main/Light.md)
