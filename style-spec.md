@@ -1,6 +1,4 @@
-# Style Specification
-
-## 日本語訳   
+# Style Specification スタイル仕様
 
 Mapbox [スタイル](https://docs.mapbox.com/help/glossary/style/)とは、マップの視覚的な外観を定義する文書で、どのデータを描画するか、描画の順番、描画時のデータのスタイルなどを定義するものです。[スタイルドキュメント](https://docs.mapbox.com/help/glossary/style/)とは、マップの視覚的な外観を定義する文書で、どのデータを描画するか、描画の順番、描画時のデータのスタイルなどを定義するものです。スタイルドキュメントは、特定のルート(階層構造の親)レベルとネストされた(階層構造の子要素)プロパティを持つ [JSON](http://www.json.org/) オブジェクトです。本仕様では、これらのプロパティを定義し、説明しているものです。
 
