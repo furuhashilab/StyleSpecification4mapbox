@@ -212,7 +212,7 @@ fillスタイル層は、1つ以上の充填レンダリング（および必要
 | データ駆動型のスタイリング | > = 1.2.0  | > = 9.1.0 | > = 5.8.0 | > = 0.15.0  |
 
 ### [塗りつぶし-翻訳](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-fill-translate)
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。 ピクセル単位。 デフォルトは[0,0]です。 補間式をサポートします。 [移行可能](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。 ピクセル単位。 デフォルトは[0,0]です。 [補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。 移行可能。
 
 ジオメトリのオフセット。値は[x、y]で、負の値はそれぞれ左と上を示します。
 
@@ -221,6 +221,388 @@ fillスタイル層は、1つ以上の充填レンダリング（および必要
 | 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
 
 ### [fill-translate-anchor](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-fill-translate-anchor)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。デフォルトは「マップ」。fill-translateが必要です。
+
+"map"：
+塗りつぶしは、マップを基準にして変換されます。
+"viewport"：
+塗りつぶしは、ビューポートを基準にして変換されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+[視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-fill-visibility)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「非表示」のいずれか。 デフォルトは「表示」です。
+
+このレイヤーが表示されるかどうか。
+"visible"：
+レイヤーが表示されます。
+"none"：
+レイヤーは表示されていません。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+## [ライン](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#line)
+lineスタイル層は、マップ上の一つ以上のストロークポリラインをレンダリングします。ラインレイヤーを使用して、ポリラインまたはマルチポリラインフィーチャの外観を構成できます。
+
+### [ラインブラー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-blur)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位の単位。 デフォルトは0です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+線に適用されたぼかし（ピクセル単位）。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.29.0    | > = 5.0.0    | > = 3.5.0 | >= 0.4.0  |
+
+### [ラインキャップ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-line-line-cap)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「バット」「丸」「四角」のいずれか。 デフォルトは「バット」です。
+
+行末の表示。
+
+"butt"：
+線の正確な端点に引かれる四角い端のあるキャップ。
+"round"：
+線の幅の半分の半径で線の端点を超えて描画され、線の端点を中心とする丸い端を持つキャップ。
+"square"：
+線の幅の半分の距離で線の端点を超えて描かれる、四角い端を持つキャップ。
+
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 2.3.0    | まだサポートされていません    | まだサポートされていません | まだサポートされていません  |
+
+### [ラインの色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-color)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。 line-patternによって無効にされます。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+線を引く色。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 2.3.0    | > = 5.0.0    | > = 3.5.0 | >= 0.4.0  |
+
+### [line-dasharray](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-dasharray)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。線幅の単位。 line-patternによって無効にされます。 移行可能。
+
+ダッシュパターンを形成する交互のダッシュとギャップの長さを指定します。長さは後で線幅によってスケーリングされます。ダッシュの長さをピクセルに変換するには、長さに現在の線幅を掛けます。lineMetrics: true指定されたGeoJSONソースは、破線を期待される縮尺でレンダリングしないことに注意してください。また、ズームに依存する式は、整数のズームレベルでのみ評価されることに注意してください。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 2.3.0    | まだサポートされていません    | まだサポートされていません | まだサポートされていません  |
+
+### [line-gap-width](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-gap-width)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位の単位。 デフォルトは0です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+ラインの実際のパスの外側にラインケーシングを描画します。値は、内側のギャップの幅を示します。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.29.0    | > = 5.0.0    | > = 3.5.0 | >= 0.4.0  |
+
+### [線勾配](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-gradient)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。 line-patternによって無効にされます。ソースが「geojson」である必要があります。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.45.0    | > = 6.5.0   | > = 4.4.0 | > = 0.11.0  |
+| データ駆動型のスタイリング | まだサポートされていません   | まだサポートされていません    | まだサポートされていません | まだサポートされていません  |
+
+### [行結合](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-line-line-join)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「ベベル」、「ラウンド」、「マイター」のいずれか。 デフォルトは「マイター」です。
+
+結合時の線の表示。
+
+"bevel"：
+線の幅の半分の距離で線の端点を超えて描画される、四角い端を持つ結合。
+"round"：
+線の幅の半分の半径で線の端点を超えて描画され、線の端点を中心とする丸い端を持つ結合。
+"miter"：
+パスの端点を超えて外側が出会うまで描かれる、鋭く角度の付いたコーナーを持つ結合。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.40.0  | > = 5.2.0    | > = 3.7.0 | > = 0.6.0  |
+
+
+### [line-miter-limit](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-line-line-miter-limit)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは2です。line-joinが「マイター」である必要があります。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+鋭角のマイター結合をベベル結合に自動的に変換するために使用されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [ラインオフセット](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-offset)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは0です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+線のオフセット。線形フィーチャの場合、正の値は線の方向に対して右に線をオフセットし、負の値は左にオフセットします。ポリゴンフィーチャの場合、正の値はインセットになり、負の値はアウトセットになります。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.12.1   | > = 3.0.0   | > = 3.1.0 | > = 0.1.0  |
+| データ駆動型のスタイリング | > = 0.29.0    | > = 5.0.0    | > = 3.5.0 | >= 0.4.0  |
+
+### [線の不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-opacity)
+0から1までのオプションの数値。 デフォルトは1です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 2.3.0    | > = 5.0.0    | > = 3.5.0 | >= 0.4.0  |
+
+### [ラインパターン](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-pattern)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 オプションの[resolvedImage](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#resolvedImage)。移行可能。
+
+画像の線を描画するために使用するスプライト内の画像の名前。シームレスパターンの場合、画像の幅は2倍（2、4、8、...、512）である必要があります。ズームに依存する式は、整数のズームレベルでのみ評価されることに注意してください。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.49.0   | > = 6.5.0    | > = 4.4.0 | > = 0.11.0  |
+
+### [line-round-limit](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-line-line-round-limit)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは1.05。line-joinは「ラウンド」である必要があります。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+浅い角度のラウンド結合をマイター結合に自動的に変換するために使用されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [line-sort-key](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-line-line-sort-key)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 1.2.0    | > = 9.1.0   | > = 5.8.0 | > = 0.15.0  |
+| データ駆動型のスタイリング | > = 1.2.0    | > = 9.1.0   | > = 5.8.0 | > = 0.15.0  |
+
+### [行翻訳](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-translate)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。 ピクセル単位。 デフォルトは「0,0」です。
+
+ジオメトリのオフセット。値は「x、y」で、負の値はそれぞれ左と上を示します。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [line-translate-anchor](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-translate-anchor)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。 デフォルトは「マップ」です。 行変換が必要です。
+
+行変換の参照フレームを制御します。
+
+"map"：
+線はマップを基準にして平行移動されます。
+"viewport"：
+線はビューポートを基準にして平行移動されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [線幅](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-line-line-width)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位の単位。デフォルトは1です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+ストロークの太さ。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.39.0  | > = 5.2.0    | > = 3.7.0 | > = 0.6.0  |
+
+### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-line-visibility)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「非表示」のいずれか。 デフォルトは「表示」です。
+
+このレイヤーが表示されるかどうか。
+"visible"：
+レイヤーが表示されます。
+"none"：
+レイヤーは表示されていません。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+## [シンボル](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#symbol)
+symbolスタイル層がポイントで、マップ上のラインに沿ってアイコンとテキストラベルをレンダリングします。シンボルレイヤーを使用して、ベクタータイルのフィーチャのラベルの外観を構成できます。
+
+### [icon-allow-overlap](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-allow-overlap)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalseです。 アイコン画像が必要です。
+
+trueの場合、以前に描画された他のシンボルと衝突しても、アイコンは表示されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0 |
+
+### [アイコンアンカー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-anchor)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「中央」、「左」、「右」、「上」、「下」、「左上」、「右上」、「左下」、「右下」のいずれか。 デフォルトは「中央」です。 アイコン画像が必要です。
+
+アンカーの最も近くに配置されたアイコンの一部。
+
+"center"：
+アイコンの中心は、アンカーに最も近い位置に配置されます。
+"left"：
+アイコンの左側は、アンカーに最も近い位置に配置されます。
+"right"：
+アイコンの右側は、アンカーに最も近い位置に配置されます。
+"top"：
+アイコンの上部は、アンカーの最も近くに配置されます。
+"bottom"：
+アイコンの下部は、アンカーの最も近くに配置されます。
+"top-left"：
+アイコンの左上隅は、アンカーの最も近くに配置されます。
+"top-right"：
+アイコンの右上隅は、アンカーの最も近くに配置されます。
+"bottom-left"：
+アイコンの左下隅は、アンカーの最も近くに配置されます。
+"bottom-right"：
+アイコンの右下隅は、アンカーの最も近くに配置されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.40.0   | > = 5.2.0  | > = 3.7.0 | > = 0.6.0  |
+| データ駆動型のスタイリング | > = 0.40.0   | > = 5.2.0  | > = 3.7.0 | > = 0.6.0  |
+
+### [アイコンカラー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-icon-color)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。アイコン画像が必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+アイコンの色。これは、[SDFアイコン](https://docs.mapbox.com/help/troubleshooting/using-recolorable-images-in-mapbox-maps/)でのみ使用できます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [icon-halo-blur](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-icon-halo-blur)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位の単位。 デフォルトは0です。アイコン画像が必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+ハローを外側に向かってフェードアウトします。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [icon-halo-color](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-icon-halo-color)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「rgba(0, 0, 0, 0)」です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+アイコンハローの色。アイコンハローは、[SDFアイコン](https://docs.mapbox.com/help/troubleshooting/using-recolorable-images-in-mapbox-maps/)でのみ使用できます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [icon-halo-width](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-icon-halo-width)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位の単位。 デフォルトは0です。アイコン画像が必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+アイコンの輪郭までのハローの距離。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [icon-ignore-placement](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-ignore-placement)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalseです。 アイコン画像が必要です。
+
+trueの場合、アイコンと衝突しても他のシンボルが表示される可能性があります。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0 |
+
+### [アイコン画像](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-image)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[resolvedImage](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#resolvedImage)。
+
+画像の背景を描画するために使用するスプライト内の画像の名前。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.35.0  | > = 5.1.0   | > = 3.6.0 | > = 0.5.0  |
+
+### [アイコン-直立状態を維持](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-keep-upright)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalseです。 アイコン画像が必要です。icon-rotation-alignmentが「マップ」である必要があります。 シンボルの配置は「line」または「line-center」である必要があります。
+
+trueの場合、アイコンが上下逆にレンダリングされないように、アイコンを反転させることができます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [アイコンオフセット](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-offset)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。デフォルトは「0,0」です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。 移行可能。
+
+アイコンのアンカーからのオフセット距離。正の値は右と下を示し、負の値は左と上を示します。各コンポーネントにの値を掛けて、icon-sizeピクセル単位の最終オフセットを取得します。icon-rotateオフセットと組み合わせると、回転方向が上にあるかのようになります。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.29.0    | > = 5.0.0    | > = 3.5.0 | >= 0.4.0  |
+
+### [アイコン-不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-icon-opacity)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。アイコン画像が必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+アイコンが描画される不透明度。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [アイコンオプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-optional)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalseです。 アイコン画像が必要です。 テキストフィールドが必要です。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [アイコンパディング](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-padding)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位の単位。 デフォルトは2です。アイコン画像が必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+シンボルの衝突を検出するために使用されるアイコン境界ボックスの周囲の追加領域のサイズ。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [icon-pitch-alignment](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-pitch-alignment)
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」、「自動」のいずれか。 デフォルトは「自動」です。 アイコン画像が必要です。
+
+マップがピッチされたときのアイコンの向き。
+
+"map"：
+アイコンはマップの平面に揃えられます。
+"viewport"：
+アイコンはビューポートの平面に揃えられます。
+"auto"：
+の値と自動的に一致しますicon-rotation-alignment。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.39.0  | > = 5.2.0   | > = 3.7.0 | > = 0.6.0  |
+
+
+
+
+
+
+
+
+
 
 
 
