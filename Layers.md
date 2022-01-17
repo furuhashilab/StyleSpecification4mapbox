@@ -595,7 +595,583 @@ trueの場合、アイコンが上下逆にレンダリングされないよう�
 | ------------ | ------------ | ----------- | -------- | --------- |
 | 基本機能 | > = 0.39.0  | > = 5.2.0   | > = 3.7.0 | > = 0.6.0  |
 
+### [アイコン-回転](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-rotate)
 
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。度単位。 デフォルトは0です。アイコン画像が必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+アイコンを時計回りに回転させます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.21.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [icon-rotation-alignment](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-rotation-alignment)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」、「自動」のいずれか。 デフォルトは「自動」です。 アイコン画像が必要です。
+
+シンボル配置と組み合わせて、アイコンの回転動作を決定します。
+
+"map"：
+symbol-placementがpointに設定されている場合、アイコンを東西に揃えます。 symbol-placementがlineまたはline-centerに設定されている場合、アイコンのx軸を線に揃えます。
+"viewport"：
+シンボル配置の値に関係なく、x軸がビューポートのx軸に位置合わせされたアイコンを生成します。
+"auto"：
+シンボル配置がポイントに設定されている場合、これはビューポートと同等です。 symbol-placementがlineまたはline-centerに設定されている場合、これはmapと同等です。
+
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.25.0  | > = 4.2.0  | > = 3.4.0 | > = 0.3.0  |
+
+### [アイコンサイズ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-size)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。元のアイコンサイズを考慮した単位。 デフォルトは1です。アイコン画像が必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+提供された係数でアイコンの元のサイズを拡大縮小します。 画像の新しいピクセルサイズは、元のピクセルサイズにアイコンサイズを掛けたものになります。 1は元のサイズです。 画像のサイズを3倍にします。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.35.0  | > = 5.1.0   | > = 3.6.0 | > = 0.5.0  |
+
+### [icon-text-fit](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-text-fit)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「なし」、「幅」、「高さ」、「両方」のいずれか。 デフォルトは「none」です。 アイコン画像が必要です。 テキストフィールドが必要です。
+
+"none"：
+アイコンは、固有のアスペクト比で表示されます。
+"width"：
+アイコンは、テキストの幅に合わせてx次元で拡大縮小されます。
+"height"：
+アイコンは、テキストの高さに合わせてy次元で拡大縮小されます。
+"both"：
+アイコンは、x次元とy次元の両方で拡大縮小されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.21.0   | > = 4.2.0   | > = 3.4.0 | > = 0.2.1  |
+| データ駆動型のスタイリング | > = 1.6.0 | > = 9.2.0  | > = 5.8.0 | > = 0.15.0  |
+
+### [icon-text-fit-padding](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-text-fit-padding)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。ピクセル単位。 デフォルトは[0,0,0,0]です。 アイコン画像が必要です。 テキストフィールドが必要です。 icon-text-fitは、「both」、「width」、または「height」である必要があります。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+icon-text-fitによって決定される寸法に追加される追加領域のサイズ（時計回りの順序：上、右、下、左）。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.21.0   | > = 4.2.0   | > = 3.4.0 | > = 0.2.1  |
+
+### [アイコン-翻訳](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-icon-translate)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。ピクセル単位。 デフォルトは[0,0]です。 アイコン画像が必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+アイコンのアンカーが元の配置から移動した距離。正の値は右と下を示し、負の値は左と上を示します。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [icon-translate-anchor](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-icon-translate-anchor)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。 デフォルトは「マップ」です。
+
+icon-translateの参照フレームを制御します。
+
+"map"：
+アイコンは、マップを基準にして翻訳されます。
+"viewport"：
+アイコンは、ビューポートを基準にして変換されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [symbol-avoid-edges](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-symbol-avoid-edges)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalseです。 
+
+trueの場合、相互の衝突を避けるために、シンボルはタイルの端を越えません。 衝突を防ぐためにベクタータイルに十分なパディングがないレイヤー、またはラインシンボルレイヤーの後に配置されたポイントシンボルレイヤーの場合に推奨されます。 Mapbox GL JSバージョン0.42.0以降など、グローバルな衝突検出をサポートするクライアントを使用する場合、タイルの境界でラベルがクリップされるのを防ぐために、このプロパティを有効にする必要はありません。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [シンボル配置](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-symbol-placement)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「ポイント」、「ライン」、「ラインセンター」のいずれか。 デフォルトは「ポイント」です。
+
+ジオメトリに対するラベルの配置。
+
+"point"：
+ラベルは、ジオメトリが配置されているポイントに配置されます。
+"line"：
+ラベルはジオメトリの線に沿って配置されます。LineStringおよびPolygonジオメトリでのみ使用できます。
+"line-center"：
+ラベルは、ジオメトリの線の中央に配置されます。LineStringおよびPolygonジオメトリでのみ使用できます。ベクトルタイル内の単一のフィーチャに複数のラインジオメトリが含まれる場合があることに注意してください。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.47.0  | > = 6.4.0 | > = 4.3.0 | > = 0.10.0  |
+
+### [シンボルソートキー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-symbol-sort-key)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。
+
+この値に基づいて機能を昇順で並べ替えます。ソートキーが低いフィーチャが最初に描画され、配置されます。icon-allow-overlapまたはtext-allow-overlapの場合false、配置時にソートキーが低いフィーチャが優先されます。icon-allow-overlapまたはがtext-allow-overlapに設定されてtrueいる場合、ソートキーが高いフィーチャは、ソートキーが低いフィーチャとオーバーラップします。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.53.0  | > = 7.4.0    | > = 4.11.0 | > = 0.14.0  |
+| データ駆動型のスタイリング | > = 0.53.0  | > = 7.4.0    | > = 4.11.0 | > = 0.14.0  |
+
+### [シンボル間隔](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-symbol-spacing)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。1以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは250です。シンボルの配置は「行」である必要があります。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+2つのシンボルアンカー間の距離。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [シンボル-zオーダー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-symbol-z-order)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」、「自動」のいずれか。 デフォルトは「自動」です。 
+
+同じレイヤー内の重複するシンボルを、データソースに表示される順序でレンダリングするか、ビューポートに対するy位置でレンダリングするかを決定します。 それ以外の場合にシンボルの順序と優先順位を制御するには、symbol-sort-keyを使用します。
+
+"auto"：
+設定されている場合、symbol-sort-keyでシンボルをソートします。 それ以外の場合、icon-allow-overlapまたはtext-allow-overlapがtrueに設定されているか、icon-ignore-placementまたはtext-ignore-placementがfalseの場合、ビューポートを基準にしたy位置でシンボルを並べ替えます。
+"viewport-y"：
+icon-allow-overlapまたはtext-allow-overlapがtrueに設定されているか、icon-ignore-placementまたはtext-ignore-placementがfalseの場合、ビューポートを基準にしたy位置でシンボルを並べ替えます。
+"source"：
+設定されている場合、symbol-sort-keyでシンボルをソートします。 それ以外の場合、並べ替えは適用されません。 シンボルは、ソースデータと同じ順序でレンダリングされます。
+
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.49.0  | > = 6.6.0  | > = 4.5.0 | > = 0.12.0 |
+
+### [text-allow-overlap](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-allow-overlap)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalseです。 テキストフィールドが必要です。
+
+trueの場合、以前に描画された他のシンボルと衝突しても、テキストは表示されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [テキストアンカー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-anchor)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「中央」、「左」、「右」、「上」、「下」、「左上」、「右上」、「左下」、「右下」のいずれか。 デフォルトは「中央」です。 テキストフィールドが必要です。 text-variable-anchorによって無効にされます。
+
+アンカーに最も近い位置に配置されたテキストの一部。
+
+"center"：
+テキストの中心はアンカーに最も近い位置に配置されます。
+"left"：
+テキストの左側は、アンカーに最も近い位置に配置されます。
+"right"：
+テキストの右側は、アンカーに最も近い位置に配置されます。
+"top"：
+テキストの上部はアンカーに最も近い位置に配置されます。
+"bottom"：
+テキストの下部は、アンカーに最も近い位置に配置されます。
+"top-left"：
+テキストの左上隅は、アンカーに最も近い位置に配置されます。
+"top-right"：
+テキストの右上隅は、アンカーの最も近くに配置されます。
+"bottom-left"：
+テキストの左下隅は、アンカーの最も近くに配置されます。
+"bottom-right"：
+テキストの右下隅は、アンカーの最も近くに配置されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.39.0  | > = 5.2.0    | > = 3.7.0 | > = 0.6.0  |
+
+### [テキストの色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-text-color)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。テキストフィールドが必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+テキストが描画される色。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [テキストフィールド](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-field)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[フォーマット済み](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#formatted)。デフォルトは ""。
+
+テキストラベルに使用する値。プレーンが提供されている場合、デフォルト/継承stringされたフォーマットオプションで扱われます。formattedSDF画像はフォーマットされたテキストではサポートされていないため、無視されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [テキストフォント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-font)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。[文字列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string)のオプションの[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。デフォルトは"OpenSans Regular"、 "Arial Unicode MSRegular"です。 テキストフィールドが必要です。
+
+テキストの表示に使用するフォントスタック。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.43.0 | > = 6.0.0 | > = 4.0.0 | > = 0.7.0 |
+
+### [text-halo-blur](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-text-halo-blur)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。デフォルトは0。テキストフィールドが必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+ハローの外側へのフェードアウト距離。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [text-halo-color](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-text-halo-color)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「rgba(0, 0, 0, 0)」です。テキストフィールドが必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+テキストのハローの色。背景から目立つようになります。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [text-halo-width](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-text-halo-width)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは0です。テキストフィールドが必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+ハローからフォントのアウトラインまでの距離。最大テキストハロー幅はフォントサイズの1/4です。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [text-ignore-placement](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-ignore-placement)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalseです。 テキストフィールドが必要です。
+
+trueの場合、テキストと衝突しても他の記号が表示される可能性があります。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [テキスト-正当化](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-justify)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「自動」、「左」、「中央」、「右」のいずれか。 デフォルトは「中央」です。 テキストフィールドが必要です。
+
+テキストの位置揃えオプション。
+
+"auto"：
+テキストはアンカー位置に揃えられます。
+"left"：
+テキストは左揃えになります。
+"center"：
+テキストは中央に配置されます。
+"right"：
+テキストは右揃えになります。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.39.0  | > = 5.2.0    | > = 3.7.0 | > = 0.6.0  |
+| 自動 | > = 0.54.0  | > = 7.4.0  | > = 4.10.0 | > = 0.14.0 |
+
+### [text-keep-upright](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-keep-upright)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはtrueです。 テキストフィールドが必要です。text-rotation-alignmentが「map」である必要があります。 シンボルの配置は「line」または「line-center」である必要があります。
+
+trueの場合、テキストが上下逆にレンダリングされないように、テキストを垂直方向に反転させることができます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [テキスト文字の間隔](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-letter-spacing)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。emsの単位。デフォルトは0。テキストフィールドが必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.40.0   | > = 5.2.0  | > = 3.7.0 | > = 0.6.0  |
+
+### [テキスト行の高さ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-line-height)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。emsの単位。デフォルトは1.2。テキストフィールドが必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+複数行テキストのテキスト先行値。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 2.3.0  | まだサポートされていません | まだサポートされていません | まだサポートされていません |
+
+### [text-max-angle](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-max-angle)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。度単位。 デフォルトは45です。テキストフィールドが必要です。 シンボルの配置は「line」または「line-center」である必要があります。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+隣接するキャラクター間の最大角度変化。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [text-max-width](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-max-width)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。emsの単位。 デフォルトは10です。テキストフィールドが必要です。 シンボルの配置は「ポイント」である必要があります。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+テキスト折り返しの最大行幅。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.40.0   | > = 5.2.0  | > = 3.7.0 | > = 0.6.0  |
+
+### [テキストオフセット](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-offset)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。emsの単位。デフォルトは「0,0」。テキストフィールドが必要です。text-radial-offsetによって無効にされます。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+アンカーからのテキストのオフセット距離。正の値は右と下を示し、負の値は左と上を示します。text-variable-anchorとともに使用する場合、入力値は絶対値と見なされます。x軸とy軸に沿ったオフセットは、アンカー位置に基づいて自動的に適用されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.35.0  | > = 5.1.0   | > = 3.6.0 | > = 0.5.0  |
+
+### [テキストの不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-text-opacity)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。テキストフィールドが必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+テキストが描画される不透明度。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [テキスト-オプション](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-optional)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはfalse。テキストフィールドが必要です。icon-imageが必要です。 
+
+trueの場合、テキストが他のシンボルと衝突し、アイコンが衝突しない場合、アイコンは対応するテキストなしで表示されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [テキストパディング](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-padding)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは2です。テキストフィールドが必要です。補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+シンボルの衝突を検出するために使用されるテキスト境界ボックスの周囲の追加領域のサイズ。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [text-pitch-alignment](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-pitch-alignment)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」、「自動」のいずれか。 デフォルトは「自動」です。テキストフィールドが必要です。
+
+マップがピッチングされたときのテキストの向き。
+
+"map"：
+テキストはマップの平面に揃えられます。
+"viewport"：
+テキストはビューポートの平面に揃えられます。
+"auto"：
+の値と自動的に一致しますtext-rotation-alignment。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.21.0	| > = 4.2.0	| > = 3.4.0	| > = 0.2.1 |
+|  auto 価値 | > = 0.25.0	|  > = 4.2.0	|  > = 3.4.0	|  > = 0.3.0 |
+
+### [text-radial-offset](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-radial-offset)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。emsの単位。デフォルトは0。テキストフィールドが必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+シンボルのアンカーの方向でのテキストの半径方向のオフセット。 text-variable-anchorと組み合わせて使用すると便利です。これは、デフォルトで2次元のtext-offsetが存在する場合に使用されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.54.0	| > = 7.4.0	| > = 4.10.0	|  > = 0.14.0  |
+| データ駆動型のスタイリング | > = 0.54.0	| > = 7.4.0	| > = 4.10.0	|  > = 0.14.0  |
+
+### [テキスト-回転](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-rotate)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。度単位。デフォルトは0。テキストフィールドが必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+テキストを時計回りに回転します。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.35.0  | > = 5.1.0   | > = 3.6.0 | > = 0.5.0  |
+
+### [text-rotation-alignment](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-rotation-alignment)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」、「自動」のいずれか。 デフォルトは「自動」です。テキストフィールドが必要です。
+
+記号の配置と組み合わせて、テキストを形成する個々のグリフの回転動作を決定します。
+
+"map"：
+symbol-placementがpointに設定されている場合、テキストを東西に揃えます。 symbol-placementがlineまたはline-centerに設定されている場合、テキストのx軸を線に揃えます。
+"viewport"：
+シンボル配置の値に関係なく、x軸がビューポートのx軸と整列しているグリフを生成します。
+"auto"：
+シンボル配置がポイントに設定されている場合、これはビューポートと同等です。 symbol-placementがlineまたはline-centerに設定されている場合、これはmapと同等です。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+|  auto 価値 | > = 0.25.0	|  > = 4.2.0	|  > = 3.4.0	|  > = 0.3.0 |
+
+### [文字サイズ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-size)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは16です。テキストフィールドが必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+フォントサイズ。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.35.0  | > = 5.1.0   | > = 3.6.0 | > = 0.5.0  |
+
+### [テキスト変換](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-transform)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「なし」、「大文字」、「小文字」のいずれか。 デフォルトは「none」です。 テキストフィールドが必要です。
+
+text-transformCSSプロパティと同様に、テキストを大文字にする方法を指定します。
+
+"none"：
+テキストは変更されません。
+"uppercase"：
+すべての文字を強制的に大文字で表示します。
+"lowercase"：
+すべての文字を強制的に小文字で表示します。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+| データ駆動型のスタイリング | > = 0.33.0  | > = 5.0.0   | > = 3.5.0 | > = 0.4.0  |
+
+### [テキスト翻訳](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-text-translate)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。ピクセル単位。デフォルトは「0,0」。テキストフィールドが必要です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+テキストのアンカーが元の配置から移動した距離。正の値は右と下を示し、負の値は左と上を示します。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [text-translate-anchor](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-symbol-text-translate-anchor)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。 デフォルトは「マップ」です。テキストフィールドが必要です。テキスト翻訳が必要です。
+
+テキスト翻訳の参照フレームを制御します。
+
+"map"：
+テキストはマップを基準にして翻訳されます。
+"viewport"：
+テキストはビューポートを基準にして翻訳されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+### [text-variable-anchor](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-variable-anchor)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)オプションの[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。「中央」、「左」、「右」、「上」、「下」、「左上」、「右上」、「左下」、「右下」のいずれか。 テキストフィールドが必要です。 シンボルの配置は「ポイント」である必要があります。
+
+マップ上に優先度の高いラベルを配置する可能性を高めるために、text-anchor場所の配列を提供できます。レンダラーは、次のラベルに移動する前に、各場所に順番にラベルを配置しようとします。text-justify: autoアンカー位置に基づいて位置合わせを選択するために使用します。オフセットを適用するには、text-radial-offsetまたは2次元を使用しtext-offsetます。
+
+"center"：
+テキストの中心はアンカーに最も近い位置に配置されます。
+"left"：
+テキストの左側は、アンカーに最も近い位置に配置されます。
+"right"：
+テキストの右側は、アンカーに最も近い位置に配置されます。
+"top"：
+テキストの上部はアンカーに最も近い位置に配置されます。
+"bottom"：
+テキストの下部は、アンカーに最も近い位置に配置されます。
+"top-left"：
+テキストの左上隅は、アンカーに最も近い位置に配置されます。
+"top-right"：
+テキストの右上隅は、アンカーの最も近くに配置されます。
+"bottom-left"：
+テキストの左下隅は、アンカーの最も近くに配置されます。
+"bottom-right"：
+テキストの右下隅は、アンカーの最も近くに配置されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.54.0  | > = 7.4.0  | > = 4.10.0 | > = 0.14.0 |
+
+### [テキスト書き込みモード](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-writing-mode)
+
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)オプションの[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。「水平」、「垂直」のいずれか。 テキストフィールドが必要です。
+
+このプロパティを使用すると、シンボルの方向を制御できます。 プロパティ値はヒントとして機能するため、言語が指定された方向をサポートしていないシンボルは、自然な方向に配置されることに注意してください。 例：配列値に単一の「垂直」列挙値が含まれている場合でも、英語のポイントシンボルは水平方向にレンダリングされます。 ポイント配置のシンボルの場合、配列内の要素の順序によって、方向バリアントの配置の優先順位が定義されます。 行配置のあるシンボルの場合、デフォルトのテキスト書き込みモードは「'horizontal'、 'vertical'」または「'vertical'、 'horizontal'」のいずれかであり、順序は配置に影響しません。
+
+"horizontal"：
+テキストの言語が水平書き込みモードをサポートしている場合、記号は水平に配置されます。
+"vertical"：
+テキストの言語が垂直書き込みモードをサポートしている場合、記号は垂直に配置されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 1.3.0	|　　> = 8.3.0	|　　　> = 5.3.0	|　　> = 0.15.0 |
+
+### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。
+
+「表示」、「なし」のいずれか。 デフォルトは「表示」です。
+
+このレイヤーが表示されるかどうか。
+
+"visible"：
+レイヤーが表示されます。
+"none"：
+レイヤーは表示されていません。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
+
+## [ラスター](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#raster)
+
+スタイルレイヤーは、マップ上にrasterラスタータイルをレンダリングします。ラスターレイヤーを使用して、ラスタータイルのカラーパラメーターを構成できます。
+
+### [ラスター-明るさ-最大](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-brightness-max)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+画像の明るさを増減します。値は最大輝度です。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
 
 
 
