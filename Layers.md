@@ -1530,127 +1530,296 @@ fill-extrusion-translateの参照フレームを制御します。
 | ------------ | ------------ | ----------- | -------- | --------- |
 | 基本機能 | > = 0.27.0	| > = 5.1.0	| > = 3.6.0	| > = 0.5.0  |
 
+### [fill-extrusion-vertical-gradient](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-vertical-gradient)
 
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはtrue。
 
+塗りつぶし押し出しレイヤーの側面に垂直方向のグラデーションを適用するかどうか。trueの場合、側面はさらに下に向かって少し暗くなります。
 
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.50.0	| > = 7.0.0	| > = 4.7.0	| > = 0.13.0  |
 
+### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
 
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
 
+このレイヤーが表示されるかどうか。
 
+"visible"：
+レイヤーが表示されます。
+"none"：
+レイヤーは表示されていません。
 
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.27.0	| > = 5.1.0	| > = 3.6.0	| > = 0.5.0  |
 
+## [ヒートマップ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#heatmap)
 
+スタイルレイヤーは、領域内のheatmapポイントの密度を表すために色の範囲をレンダリングします。
 
+### [ヒートマップカラー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-color)
 
-## 原文
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは"interpolate"、"linear"、"heatmap-density"、0、 "rgba（0、0、255、0）"、0.1、 "royalblue"、0.3、 "cyan"、0.5、 "lime"、0.7、 "yellow"、1、 "red"。 補間式をサポートします。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
 
-# Layers
+ヒートマップの密度値に基づいて、各ピクセルの色を定義します。 "heatmap-density"を入力として使用する式である必要があります。
 
-A style's layers property lists all the layers available in that style. The type of layer is specified by the "type" property, and must be one of background, fill, line, symbol, raster, circle, fill-extrusion, heatmap, hillshade, sky.
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.41.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0  |
+| データ駆動型のスタイリング | まだサポートされていません	| まだサポートされていません	| まだサポートされていません	| まだサポートされていません |
 
-Except for layers of the background or sky types, each layer must refer to a source. Layers take the data that they get from a [source](https://docs.mapbox.com/help/glossary/source/), optionally filter features, and then define how those features are styled.
+### [ヒートマップ-強度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-intensity)
 
-Here is an example layers object which could be included in a [style](https://docs.mapbox.com/help/glossary/style/):
-```
-"layers": [
-  {
-    "id": "water",
-    "source": "mapbox-streets",
-    "source-layer": "water",
-    "type": "fill",
-    "paint": {
-      "fill-color": "#00ffff"
-    }
-  }
-]
-```
-## [Layer properties](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layer-properties)
-### [id](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#id)
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
-Required [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string).
+ヒートマップの重みに似ていますが、ヒートマップの強度をグローバルに制御します。 主にズームレベルに基づいてヒートマップを調整するために使用されます。
 
-Unique layer name.
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.41.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0  |
 
-### [type](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#type)
-Required [enum](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum). One of "fill", "line", "symbol", "circle", "heatmap", "fill-extrusion", "raster", "hillshade", "background", "sky".
+### [ヒートマップ-不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-opacity)
 
-Rendering type of this layer.
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
-"fill":
-A filled polygon with an optional stroked border.
+ヒートマップレイヤーが描画されるグローバルな不透明度。
 
-"line":
-A stroked line.
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.41.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0  |
 
-"symbol":
-An icon or a text label.
+### [ヒートマップ-半径](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-radius)
 
-"circle":
-A filled circle.
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。1以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは30です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
-"heatmap":
-A heatmap.
+1つのヒートマップポイントの影響の半径（ピクセル単位）。 値を大きくすると、ヒートマップはスムーズになりますが、詳細度は低くなります。 ヒートマップレイヤーのqueryRenderedFeaturesは、この半径内のポイントを返します。
 
-"fill-extrusion":
-An extruded (3D) polygon.
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.41.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0  |
+| データ駆動型のスタイリング | > = 0.43.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0 |
 
-"raster":
-Raster map textures such as satellite imagery.
+### [ヒートマップの重み](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-weight)
 
-"hillshade":
-Client-side hillshading visualization based on DEM data. Currently, the implementation only supports Mapbox Terrain RGB and Mapzen Terrarium tiles.
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは1です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
 
-"background":
-The background color or pattern of the map.
+個々のポイントがヒートマップにどの程度貢献しているかの尺度。値10は、同じ場所に10ポイントの重み1があることと同じです。クラスタリングと組み合わせると特に便利です。
 
-"sky":
-A spherical dome around the map that is always rendered behind all other layers.
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.41.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0  |
+| データ駆動型のスタイリング | > = 0.41.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0 |
 
-### [filter](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#filter)
-Optional [expression](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/).
+### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
 
-An expression specifying conditions on source features. Only features that match the filter are displayed. Zoom expressions in filters are only evaluated at integer zoom levels. The ["feature-state", ...] expression is not supported in filter expressions. The ["pitch"] and ["distance-from-center"] expressions are supported only for filter expressions on the symbol layer.
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
 
-### [layout](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout)
-Optional [layout](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property).
+このレイヤーが表示されるかどうか。
 
-Layout properties for the layer.
+"visible"：
+レイヤーが表示されます。
+"none"：
+レイヤーは表示されていません。
 
-### [maxzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#maxzoom)
-Optional [number](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number) between 0 and 24 inclusive.
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.41.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0  |
 
-The maximum zoom level for the layer. At zoom levels equal to or greater than the maxzoom, the layer will be hidden.
+## [陰影起伏](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#hillshade)
 
-### [metadata](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#metadata)
-Optional.
+hillshadeスタイル層は、クライアント側のデジタル標高モデル（DEM）データをレンダリングします。実装は、Mapbox TerrainRGBおよびMapzenTerrariumタイルのみをサポートします。
 
-Arbitrary properties useful to track with the layer, but do not influence rendering. Properties should be prefixed to avoid collisions, like 'mapbox:'.
+### [陰影起伏の色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-accent-color)
 
-### [minzoom](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#minzoom)
-Optional number between 0 and 24 inclusive.
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
-The minimum zoom level for the layer. At zoom levels less than the minzoom, the layer will be hidden.
+鋭い崖や峡谷などの起伏の多い地形を強調するために使用される陰影の色。
 
-### [paint](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint)
-Optional [paint](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property).
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.43.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0 |
 
-Default paint properties for this layer.
+### [陰影起伏-誇張](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-exaggeration)
 
-### [source](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#source)
-Optional [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string).
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは0.5です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
-Name of a source description to be used for this layer. Required for all layer types except background.
+陰影起伏の強さ。
 
-### [source-layer](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#source-layer)
-Optional [string](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#string).
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.43.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0 |
 
-Layer to use from a vector tile source. Required for vector tile sources; prohibited for all other source types, including GeoJSON sources.
+### [陰影起伏-ハイライト-色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-highlight-color)
 
-## [Layer sub-properties](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layer-sub-properties)
-Layers have two sub-properties that determine how data from that layer is rendered: layout and paint properties.
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃FFFFFF」です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
-• Layout properties appear in the layer's "layout" object. They are applied early in the rendering process and define how data for that layer is passed to the GPU. Changes to a layout property require an asynchronous "layout" step.
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.43.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0 |
 
-• Paint properties are applied later in the rendering process. Paint properties appear in the layer's "paint" object. Changes to a paint property are cheap and happen synchronously.
+### [陰影起伏-照明-アンカー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-illumination-anchor)
 
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。 デフォルトは「マップ」です。
 
+マップを回転させたときの光源の方向。
+
+"map"：
+陰影起伏の照明は北方向を基準にしています。
+"viewport"：
+陰影起伏の照明は、ビューポートの上部を基準にしています。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.43.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0 |
+
+### [陰影起伏-照明-方向](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-illumination-direction)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から359までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは335です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+hillshade-illumination-anchorがビューポートに設定されている場合はビューポートの上部として0を使用し、hillshade-illumination-anchorがmapに設定されている場合は真北で、ヒルシェーディングを生成するために使用される光源の方向。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.43.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0 |
+
+###[陰影起伏の色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-shadow-color)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+光源とは反対側の領域のシェーディングカラー。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.43.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0 |
+
+### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
+
+このレイヤーが表示されるかどうか。
+
+"visible"：
+レイヤーが表示されます。
+"none"：
+レイヤーは表示されていません。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 0.43.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0  |
+
+## [空](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#sky)
+
+skyスタイルレイヤーは、マップ全体を含む定型化された球形のドームをレンダリングし、すべてのレイヤーの背後に自動的にレンダリングされます。これを使用して、地平線の上の領域を、特定の時刻を表すシミュレートされた空、または定型化されたカスタムグラデーションで埋めることができます。
+
+### [空-大気-色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-atmosphere-color)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「white」です。 スカイタイプは「atmosphere」である必要があります。
+
+主な大気散乱係数を微調整するために使用される色。白を使用すると、デフォルトの係数が適用され、大気に自然な青色が与えられます。この色は、散乱中に対応する波長がどの程度表されるかに影響します。アルファチャネルは、大気の密度を表します。最大密度は1、密度は0です。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
+
+### [空-大気-ハローカラー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-atmosphere-halo-color)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「white」です。 スカイタイプは「atmosphere」である必要があります。
+
+大気の太陽の光輪に適用される色。アルファチャネルは、大気の空のレイヤーで太陽のハローがどれだけ強く表現されているかを表します。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
+
+### [空-大気-太陽](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-atmosphere-sun)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。00から360180までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。度単位。スカイタイプは「atmosphere」である必要があります。
+
+太陽の中心の位置「方位角、p極角」。方位角は、北緯0度を基準にした太陽の位置を示し、度は時計回りに進みます。極角は太陽の高さを示します。ここで、0°は真上、天頂、90°は地平線です。このプロパティを省略すると、太陽の中心はライトの位置から直接継承されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
+
+### [空-大気-太陽の強度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-atmosphere-sun-intensity)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から100までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは10です。スカイタイプは「atmosphere」である必要があります。
+
+大気中の光源としての太陽の強度（0から100までのスケール）。値を大きくすると空が明るくなります。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
+
+### [空のグラデーション](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-gradient)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは"interpolate"、"linear"、"sky-radial-progress"、0.8、 "＃87ceeb"、1、 "white"です。 スカイタイプは「gradient」である必要があります。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+
+空を着色するための放射状のカラーグラデーションを定義します。 色の値は、sky-radial-progressを使用した式で補間できます。 内挿の範囲[0、1]は、sky-gradient-centerで指定された位置を中心とする「0、sky-gradient-radius」の半径距離（度単位）をカバーします。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
+| データ駆動型のスタイリング | まだサポートされていません	| まだサポートされていません	| まだサポートされていません	| まだサポートされていません |
+
+### [空のグラデーションセンター](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-gradient-center)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。00から360180までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。デフォルトは「0,0」です。スカイタイプは「gradient」である必要があります。
+
+グラデーションの中心の位置「方位角、p極角」。方位角は、北に0度を基準にしたグラデーションの中心の位置を示します。ここで、度は時計回りに進みます。極角は、グラデーションの中心の高さを示します。ここで、0°は真上、天頂、90°は地平線です。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
+
+### [空のグラデーション半径](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-gradient-radius)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から180までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは90です。スカイタイプは「atmosphere」である必要があります。
+
+空のグラデーションの中心からグラデーションが伸びるまでの角距離（度単位で測定）。 値が180の場合、グラデーションは空のグラデーションの中心から反対方向に折り返されます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
+
+### [空の不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-opacity)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+
+空のレイヤー全体の不透明度。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
+
+### [スカイタイプ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-type)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「gradient」、「atmosphere」のいずれか。 デフォルトは「atmosphere」です。
+
+空のタイプ。
+
+"gradient"：
+sky-gradient-radiusとsky-gradientで構成できるグラデーションで空をレンダリングします。
+"atmosphere"：
+シミュレートされた大気散乱アルゴリズムを使用して空をレンダリングします。太陽の方向を光の位置に関連付けるか、sky-atmosphere-sunを介して明示的に設定できます。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
+
+### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
+
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
+
+このレイヤーが表示されるかどうか。
+
+"visible"：
+レイヤーが表示されます。
+"none"：
+レイヤーは表示されていません。
+
+| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
+| ------------ | ------------ | ----------- | -------- | --------- |
+| 基本機能 | > = 2.0.0	| > = 10.0.0	| > = 10.0.0	| まだサポートされていません  |
