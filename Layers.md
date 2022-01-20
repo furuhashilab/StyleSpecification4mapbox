@@ -1684,7 +1684,7 @@ hillshade-illumination-anchorがビューポートに設定されている場合
 | ------------ | ------------ | ----------- | -------- | --------- |
 | 基本機能 | > = 0.43.0	| > = 6.0.0	| > = 4.0.0	| > = 0.7.0 |
 
-###[陰影起伏の色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-shadow-color)
+### [陰影起伏の色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-shadow-color)
 
 [ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
