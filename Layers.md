@@ -232,10 +232,11 @@ fillスタイル層は、1つ以上の充填レンダリング（および必要
 | ------------ | ------------ | ----------- | -------- | --------- |
 | 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
 
-[視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-fill-visibility)
+### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-fill-visibility)
 [レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「非表示」のいずれか。 デフォルトは「表示」です。
 
 このレイヤーが表示されるかどうか。
+
 "visible"：
 レイヤーが表示されます。
 "none"：
