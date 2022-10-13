@@ -1,11 +1,11 @@
 ## 日本語
 
 # レイヤー
-スタイルのレイヤー プロパティには、そのスタイルで使用できるすべてのレイヤーが一覧表示されます。レイヤーの種類は type 属性で指定し、background、fill、line、symbol、raster、circle、fill-extrusion、heatmap、hillsshade、sky のいずれかを指定する必要があります。
+スタイルの`レイヤー`プロパティには、そのスタイルで使用できるすべてのレイヤーが一覧表示されます。レイヤーの種類は`type`属性で指定し、background、fill、line、symbol、raster、circle、fill-extrusion、heatmap、hillsshade、sky のいずれかを指定する必要があります。
 
 background または sky タイプのレイヤーを除いて、各レイヤーはソースを参照する必要があります。レイヤーは[ソース](https://docs.mapbox.com/help/glossary/source/)から取得したデータを受け取り、オプションでフィーチャーをフィルタリングし、それらのフィーチャーがどのようにスタイリングされるかを定義します。
 
-以下は、[スタイル](https://docs.mapbox.com/help/glossary/style/)に含まれる可能性のあるレイヤーオブジェクトの例です。
+以下は、[スタイル](https://docs.mapbox.com/help/glossary/style/)に含まれる可能性のある`レイヤー`オブジェクトの例です。
 ```
 "layers": [
   {
@@ -27,7 +27,7 @@ background または sky タイプのレイヤーを除いて、各レイヤー�
 一意なレイヤー名です。
 
 ### [タイプ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#type)
-[列挙](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)は必須です。fill", "line", "symbol", "circle", "heatmap", "fill-extrusion", "raster", "hillshade", "background", "sky "のいずれか。
+[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)は必須です。fill", "line", "symbol", "circle", "heatmap", "fill-extrusion", "raster", "hillshade", "background", "sky "のいずれか。
 
 このレイヤーのレンダリングタイプ。
 
