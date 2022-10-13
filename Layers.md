@@ -112,7 +112,7 @@ DEMデータに基づくクライアントサイドのヒルシェード視覚�
 `background`スタイル層は、マップ全体をカバーしています。背景スタイルレイヤーを使用して、他のすべてのマップコンテンツの下に表示される色またはパターンを構成します。背景レイヤーが透明であるか、スタイルから省略されている場合、別のスタイルレイヤーを表示しないマップビューの部分は透明です。
 
 ### [背景色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#source-layer)
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 任意の[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは｀"#000000"`。background-patternによって無効にされています。[`補完`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 任意の[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`"#000000"`。background-patternによって無効にされています。[`補完`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 背景が描画される色。
 
