@@ -27,38 +27,38 @@ backgroundまたはskyタイプのレイヤーを除いて、各レイヤーは�
 一意なレイヤー名です。
 
 ### [タイプ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#type)
-[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)は必須です。fill", "line", "symbol", "circle", "heatmap", "fill-extrusion", "raster", "hillshade", "background", "sky "のいずれか。
+[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)は必須です。`"fill"`, `"line"`, `"symbol"`, `"circle"`, `"heatmap"`, `"fill-extrusion"`, `"raster"`, `"hillshade"`, `"background"`, `"sky"`のいずれか。
 
 このレイヤーのレンダリングタイプ。
 
-"fill":
+`"fill"`:
 塗りつぶされた多角形で、オプションで描画された境界線があります。
 
-"line"：
+`"line"`：
 描画された線。
 
-"symbol":
+`"symbol"`:
 アイコンまたはテキストラベル。
 
-"circle":
+`"circle"`:
 塗りつぶした円。
 
-"heatmap": 
+`"heatmap"`: 
 ヒートマップ。
 
-"fill-extrusion":
+`"fill-extrusion"`:
 押し出し（3D）ポリゴン。
 
-"ラスター": 
+`"raster"`: 
 衛星画像などのラスターマップテクスチャ。
 
-"hillsshade"：
+`"hillsshade"`：
 DEMデータに基づくクライアントサイドのヒルシェード視覚化。現在のところ、Mapbox Terrain RGB と Mapzen Terrarium タイルのみをサポートする実装になっています。
 
-"background"（背景）：
+`"background"`：
 マップの背景色またはパターン。
 
-"sky":
+`"sky"`:
 マップを囲む球状のドームで、常に他のすべてのレイヤーの後ろにレンダリングされます。
 
 ### [フィルター](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#filter)
