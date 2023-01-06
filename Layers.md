@@ -175,7 +175,7 @@ DEMデータに基づくクライアントサイドのヒルシェード視覚�
 | データ駆動型のスタイリング | > = 0.19.0   | > = 5.0.0    | > = 3.5.0 | > = 0.4.0  |
 
 ### [塗りつぶしの不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-fill-opacity)
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。 移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。 0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。 移行可能。
 
 塗りつぶしレイヤー全体の不透明度。`fill-color`とは対照的に、ストロークが使用されている場合、この値は塗りつぶしの周囲の1pxのストロークにも影響します。
 
@@ -1059,7 +1059,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [text-radial-offset](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-text-radial-offset)
 
-[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。emsの単位。デフォルトは0。テキストフィールドが必要です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。emsの単位。デフォルトは0。テキストフィールドが必要です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。
 
 シンボルのアンカーの方向でのテキストの半径方向のオフセット。`text-variable-anchor`と組み合わせて使用すると便利です。これは、デフォルトで2次元の`text-offset`が存在する場合に使用されます。
 
@@ -1197,7 +1197,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 [レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)オプションの[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。`"horizontal"`,`"vertical"`のいずれか。 テキストフィールドが必要です。
 
-このプロパティを使用すると、シンボルの方向を制御できます。 プロパティ値はヒントとして機能するため、言語が指定された方向をサポートしていないシンボルは、自然な方向に配置されることに注意してください。 例：配列値に単一の「垂直」列挙値が含まれている場合でも、英語のポイントシンボルは水平方向にレンダリングされます。 ポイント配置のシンボルの場合、配列内の要素の順序によって、方向バリアントの配置の優先順位が定義されます。 行配置のあるシンボルの場合、デフォルトのテキスト書き込みモードは「'horizontal'、 'vertical'」または「'vertical'、 'horizontal'」のいずれかであり、順序は配置に影響しません。
+このプロパティを使用すると、シンボルの方向を制御できます。 プロパティ値はヒントとして機能するため、言語が指定された方向をサポートしていないシンボルは、自然な方向に配置されることに注意してください。 例：配列値に単一の「垂直」列挙値が含まれている場合でも、英語のポイントシンボルは水平方向にレンダリングされます。 ポイント配置のシンボルの場合、配列内の要素の順序によって、方向バリアントの配置の優先順位が定義されます。 行配置のあるシンボルの場合、デフォルトのテキスト書き込みモードは['horizontal'、 'vertical']または['vertical'、 'horizontal']のいずれかであり、順序は配置に影響しません。
 
 `"horizontal"`：
 テキストの言語が水平書き込みモードをサポートしている場合、記号は水平に配置されます。
@@ -1231,7 +1231,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスター-明るさ-最大](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-brightness-max)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`補間式`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 画像の明るさを増減します。値は最大輝度です。
 
@@ -1241,7 +1241,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスター-明るさ-最小](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-brightness-min)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`0`です。[`補間式`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`0`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 画像の明るさを増減します。値は最小輝度です。
 
@@ -1251,7 +1251,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスター-コントラスト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-contrast)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`-1`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`0`です。[`補間式`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`-1`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`0`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 画像のコントラストを増減します。
 
@@ -1261,7 +1261,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスターフェード期間](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-fade-duration)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ミリ秒単位。 デフォルトは300です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ミリ秒単位。 デフォルトは300です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 新しいタイルが追加されたときのフェード期間。
 
@@ -1271,7 +1271,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスター-色相-回転](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-hue-rotate)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。度単位。デフォルトは0。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。度単位。デフォルトは`0`。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 カラーホイールを中心に色相を回転させます。
 
@@ -1281,7 +1281,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスター不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-opacity)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 画像が描画される不透明度。
 
@@ -1291,14 +1291,14 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスターリサンプリング](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-resampling)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「linear」、「nearest」の1つ。 デフォルトは「linear」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"linear"`、`"nearest"`の1つ。 デフォルトは`"linear"`です。
 
 オーバースケーリングに使用するリサンプリング/補間方法。テクスチャ倍率フィルターとも呼ばれます。
 
-"linear"：
+`"linear"`：
 （Bi）線形フィルタリングは、最も近い4つの元のソースピクセルの加重平均を使用してピクセル値を補間し、オーバースケールすると滑らかでぼやけた外観を作成します。
 
-"nearest"：
+`"nearest"`：
 最近傍フィルタリングは、最も近い元のソースピクセルを使用してピクセル値を補間し、オーバースケールするとシャープでありながらピクセル化された外観を作成します。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1307,7 +1307,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスター飽和](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-saturation)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。-1から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは0です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`-1`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`0`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 画像の彩度を増減します。
 
@@ -1317,14 +1317,14 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"visible"`,`"none"`のいずれか。 デフォルトは`"visible"`です。
 
 このレイヤーが表示されるかどうか。
 
-"visible"：
+`"visible"`：
 レイヤーが表示されます。
 
-"none"：
+`"none"`：
 レイヤーは表示されていません。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1333,11 +1333,11 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ## [サークル](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#circle)
 
-circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶされた円をレンダリングします。円レイヤーを使用して、ベクタータイルのポイントまたはポイントコレクションフィーチャの視覚的な外観を構成できます。円レイヤーは、半径が画面単位で測定される円をレンダリングします。
+`circle`スタイルレイヤーは、マップ上に1つ以上の塗りつぶされた円をレンダリングします。円レイヤーを使用して、ベクタータイルのポイントまたはポイントコレクションフィーチャの視覚的な外観を構成できます。円レイヤーは、半径が画面単位で測定される円をレンダリングします。
 
 ### [サークルブラー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-blur)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは0です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは`0`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 円をぼかす量。1は、中心点のみが完全に不透明になるように円をぼかします。
 
@@ -1348,7 +1348,7 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [サークルカラー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-color)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`＃000000`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 円の塗りつぶしの色。
 
@@ -1359,7 +1359,7 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [サークルの不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-opacity)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 円が描かれる不透明度。
 
@@ -1370,14 +1370,14 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [circle-pitch-alignment](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-pitch-alignment)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。 デフォルトは「ビューポート」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"map"`,`"viewport"`のいずれか。 デフォルトは`"viewport"`です。
 
 マップがピッチングされたときの円の方向。
 
-"map"：
+`"map"`：
 円はマップの平面に位置合わせされます。
 
-"viewport"：
+`"viewport"`：
 円はビューポートの平面に位置合わせされます。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1386,14 +1386,14 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [サークルピッチスケール](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-pitch-scale)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。 デフォルトは「マップ」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"map"`,`"viewport"`のいずれか。 デフォルトは`"map"`です。
 
 マップがピッチングされたときの円のスケーリング動作を制御します。
 
-"map"：
+`"map"`：
 円は、カメラまでの見かけの距離に応じて拡大縮小されます。
 
-"viewport"：
+`"viewport"`：
 円はスケーリングされません。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1402,7 +1402,7 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [円半径](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-radius)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは5です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは`5`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 円の半径。
 
@@ -1413,7 +1413,7 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [サークルソートキー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-circle-circle-sort-key)
 
-[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[番号](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。
+[レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。 オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。
 
 この値に基づいて機能を昇順で並べ替えます。ソートキーが高い機能は、ソートキーが低い機能の上に表示されます。
 
@@ -1424,7 +1424,7 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [サークルストロークカラー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-stroke-color)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`＃000000`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 円のストロークの色。
 
@@ -1435,7 +1435,7 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [サークル-ストローク-不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-stroke-opacity)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 円のストロークの不透明度。
 
@@ -1446,7 +1446,7 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [サークルストローク幅](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-stroke-width)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは0です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは`0`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 円のストロークの幅。 ストロークは、円の半径の外側に配置されます。
 
@@ -1457,7 +1457,7 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [サークル翻訳](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-translate)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。ピクセル単位。デフォルトは「0,0」。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。ピクセル単位。デフォルトは`[0,0]`。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。
 
 ジオメトリのオフセット。値は[x、y]で、負の値はそれぞれ左と上を示します。
 
@@ -1467,14 +1467,14 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [サークル翻訳-アンカー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-circle-circle-translate-anchor)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。 デフォルトは「マップ」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"map"`,`"viewport"`のいずれか。 デフォルトは`"map"`です。
 
-円変換の参照フレームを制御します。
+`circle-translate`の参照フレームを制御します。
 
-"map"：
+`"map"`：
 円はマップを基準にして平行移動されます。
 
-"viewport"：
+`"viewport"`：
 円はビューポートを基準にして平行移動されます。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1483,14 +1483,14 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"visible"`,`"none"`のいずれか。 デフォルトは`"visible"`です。
 
 このレイヤーが表示されるかどうか。
 
-"visible"：
+`"visible"`：
 レイヤーが表示されます。
 
-"none"：
+`"none"`：
 レイヤーは表示されていません。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1499,35 +1499,13 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ## [塗りつぶし-押し出し](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#fill-extrusion)
 
-塗りつぶし押し出しスタイルレイヤーは、マップ上に1つ以上の塗りつぶされた（およびオプションでストロークされた）押し出し（3D）ポリゴンをレンダリングします。 塗りつぶし押し出しレイヤーを使用して、ポリゴンまたはマルチポリゴンフィーチャの押し出しと外観を構成できます。
+`fill-extrusion`スタイルレイヤーは、マップ上に1つ以上の塗りつぶされた（およびオプションでストロークされた）押し出し（3D）ポリゴンをレンダリングします。 塗りつぶし押し出しレイヤーを使用して、ポリゴンまたはマルチポリゴンフィーチャの押し出しと外観を構成できます。
 
 ### [fill-extrusion-base](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-base)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。メートル単位。 デフォルトは0です。fill-extrusion-heightが必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。メートル単位。 デフォルトは`0`です。fill-extrusion-heightが必要です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
-このレイヤーのベースを押し出す高さ。 fill-extrusion-height以下である必要があります。
-
-| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
-| ------------ | ------------ | ----------- | -------- | --------- |
-| 基本機能 | > = 0.27.0	| > = 5.1.0	| > = 3.6.0	| > = 0.5.0  |
-| データ駆動型のスタイリング | > = 0.27.0	| > = 5.1.0	| > = 3.6.0	| > = 0.5.0  |
-
-### [塗りつぶし-押し出し-色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-color)
-
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。fill-extrusion-patternによって無効にされます。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
-
-押し出された塗りつぶしのベースカラー。ルート設定と組み合わせたこの色に基づいて、押し出しのサーフェスのシェーディングが異なりlightます。この色がアルファコンポーネントのように指定されている場合rgba、アルファコンポーネントは無視されます。fill-extrusion-opacityレイヤーの不透明度を設定するために使用します。
-
-| SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
-| ------------ | ------------ | ----------- | -------- | --------- |
-| 基本機能 | > = 0.27.0	| > = 5.1.0	| > = 3.6.0	| > = 0.5.0  |
-| データ駆動型のスタイリング | > = 0.27.0	| > = 5.1.0	| > = 3.6.0	| > = 0.5.0  |
-
-### [塗りつぶし-押し出し-高さ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-height)
-
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。メートル単位。 デフォルトは0です。fill-extrusion-heightが必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
-
-このレイヤーのベースを押し出す高さ。 fill-extrusion-height以下である必要があります。
+このレイヤーのベースを押し出す高さ。`fill-extrusion-heigh`以下である必要があります。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1536,9 +1514,9 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [塗りつぶし-押し出し-色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-color)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。fill-extrusion-patternによって無効にされます。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`"＃000000"`です。fill-extrusion-patternによって無効にされます。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
-押し出された塗りつぶしのベースカラー。 ルートライト設定と組み合わせたこの色に基づいて、押し出しのサーフェスのシェーディングが異なります。 この色がアルファコンポーネントを含むrgbaとして指定されている場合、アルファコンポーネントは無視されます。 fill-extrusion-opacityを使用して、レイヤーの不透明度を設定します。
+押し出した塗りつぶしのベースカラーです。押し出しの表面は、この色とルート`light`の設定の組み合わせによって、異なるシェーディングが行われます。この色がアルファ成分を含む`rgba`として指定された場合、アルファ成分は無視されます。レイヤーの不透明度を設定するには、`fill-extrusion-opacity`を使用してください。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1547,9 +1525,9 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [塗りつぶし-押し出し-高さ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-height)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。メートル単位。 デフォルトは0です。fill-extrusion-heightが必要です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。メートル単位。 デフォルトは`0`です。fill-extrusion-heightが必要です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
-このレイヤーを押し出す高さ。
+このレイヤーのベースを押し出す高さ。fill-extrusion-height以下である必要があります。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1558,9 +1536,9 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [塗りつぶし-押し出し-不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-opacity)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
-充填押出層全体の不透明度。これは、機能ごとではなく、レイヤーごとにレンダリングされ、データ駆動型のスタイル設定は使用できません。
+塗りつぶし押し出しレイヤー全体の不透明度。これはレイヤー単位でレンダリングされ、フィーチャー単位ではないので、データ駆動型のスタイリングは利用できない。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1579,8 +1557,7 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [塗りつぶし-押し出し-変換](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-translate)
 
-
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。ピクセル単位。デフォルトは「0,0」。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。ピクセル単位。デフォルトは`「0,0」`。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 ジオメトリのオフセット。値は[x、y]で、負の値はそれぞれ左と上（平面上）を示します。
 
@@ -1590,16 +1567,15 @@ circleスタイルレイヤーは、マップ上に1つ以上の塗りつぶさ�
 
 ### [fill-extrusion-translate-anchor](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-translate-anchor)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。 デフォルトは「マップ」です。fill-extrusion-translateが必要です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"map"`,`"viewport"`のいずれか。 デフォルトは`"map"`です。fill-extrusion-translateが必要です。
 
 fill-extrusion-translateの参照フレームを制御します。
 
-"map"：
+`"map"`：
 塗りつぶしの押し出しは、マップを基準にして平行移動されます。
 
-"viewport"：
+`"viewport"`：
 塗りつぶしの押し出しは、ビューポートを基準にして変換されます。
-
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1607,7 +1583,7 @@ fill-extrusion-translateの参照フレームを制御します。
 
 ### [fill-extrusion-vertical-gradient](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-fill-extrusion-fill-extrusion-vertical-gradient)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトはtrue。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトは`true`。
 
 塗りつぶし押し出しレイヤーの側面に垂直方向のグラデーションを適用するかどうか。trueの場合、側面はさらに下に向かって少し暗くなります。
 
@@ -1617,14 +1593,14 @@ fill-extrusion-translateの参照フレームを制御します。
 
 ### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"visible"`,`"none"`のいずれか。 デフォルトは`"visible"`です。
 
 このレイヤーが表示されるかどうか。
 
-"visible"：
+`"visible"`：
 レイヤーが表示されます。
 
-"none"：
+`"none"`：
 レイヤーは表示されていません。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1633,13 +1609,13 @@ fill-extrusion-translateの参照フレームを制御します。
 
 ## [ヒートマップ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#heatmap)
 
-スタイルレイヤーは、領域内のheatmapポイントの密度を表すために色の範囲をレンダリングします。
+スタイルレイヤーは、領域内の`heatmap`ポイントの密度を表すために色の範囲をレンダリングします。
 
 ### [ヒートマップカラー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-color)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは"interpolate"、"linear"、"heatmap-density"、0、 "rgba（0、0、255、0）"、0.1、 "royalblue"、0.3、 "cyan"、0.5、 "lime"、0.7、 "yellow"、1、 "red"。 補間式をサポートします。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`["interpolate",["linear"],["heatmap-density"],0,"rgba(0, 0, 255, 0)",0.1,"royalblue",0.3,"cyan",0.5,"lime",0.7,"yellow",1,"red"]`。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。
 
-ヒートマップの密度値に基づいて、各ピクセルの色を定義します。 "heatmap-density"を入力として使用する式である必要があります。
+ヒートマップの密度値に基づいて、各ピクセルの色を定義します。`["heatmap-density"]`を入力として使用する式である必要があります。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1648,9 +1624,9 @@ fill-extrusion-translateの参照フレームを制御します。
 
 ### [ヒートマップ-強度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-intensity)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは`1`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
-ヒートマップの重みに似ていますが、ヒートマップの強度をグローバルに制御します。 主にズームレベルに基づいてヒートマップを調整するために使用されます。
+`heatmap-weight`に似ていますが、ヒートマップの強度をグローバルに制御します。 主にズームレベルに基づいてヒートマップを調整するために使用されます。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1658,7 +1634,7 @@ fill-extrusion-translateの参照フレームを制御します。
 
 ### [ヒートマップ-不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-opacity)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 ヒートマップレイヤーが描画されるグローバルな不透明度。
 
@@ -1668,9 +1644,9 @@ fill-extrusion-translateの参照フレームを制御します。
 
 ### [ヒートマップ-半径](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-radius)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。1以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。 デフォルトは30です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`1`以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。ピクセル単位。デフォルトは`30`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
-1つのヒートマップポイントの影響の半径（ピクセル単位）。 値を大きくすると、ヒートマップはスムーズになりますが、詳細度は低くなります。 ヒートマップレイヤーのqueryRenderedFeaturesは、この半径内のポイントを返します。
+1つのヒートマップポイントの影響の半径（ピクセル単位）。 値を大きくすると、ヒートマップはスムーズになりますが、詳細度は低くなります。 ヒートマップレイヤーの`queryRenderedFeatures`は、この半径内のポイントを返します。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1679,7 +1655,7 @@ fill-extrusion-translateの参照フレームを制御します。
 
 ### [ヒートマップの重み](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-heatmap-heatmap-weight)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは1です。[機能状態](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`以上のオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは`1`です。[`機能状態`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#feature-state)および[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。
 
 個々のポイントがヒートマップにどの程度貢献しているかの尺度。値10は、同じ場所に10ポイントの重み1があることと同じです。クラスタリングと組み合わせると特に便利です。
 
@@ -1690,14 +1666,14 @@ fill-extrusion-translateの参照フレームを制御します。
 
 ### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"visible"`,`"none"`のいずれか。 デフォルトは`"visible"`です。
 
 このレイヤーが表示されるかどうか。
 
-"visible"：
+`"visible"`：
 レイヤーが表示されます。
 
-"none"：
+`"none"`：
 レイヤーは表示されていません。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1706,11 +1682,11 @@ fill-extrusion-translateの参照フレームを制御します。
 
 ## [陰影起伏](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#hillshade)
 
-hillshadeスタイル層は、クライアント側のデジタル標高モデル（DEM）データをレンダリングします。実装は、Mapbox TerrainRGBおよびMapzenTerrariumタイルのみをサポートします。
+`hillshade`スタイル層は、クライアント側のデジタル標高モデル（DEM）データをレンダリングします。実装は、Mapbox TerrainRGBおよびMapzenTerrariumタイルのみをサポートします。
 
 ### [陰影起伏の色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-accent-color)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`"＃000000"`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 鋭い崖や峡谷などの起伏の多い地形を強調するために使用される陰影の色。
 
@@ -1720,7 +1696,7 @@ hillshadeスタイル層は、クライアント側のデジタル標高モデ�
 
 ### [陰影起伏-誇張](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-exaggeration)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは0.5です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`0.5`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 陰影起伏の強さ。
 
@@ -1730,7 +1706,7 @@ hillshadeスタイル層は、クライアント側のデジタル標高モデ�
 
 ### [陰影起伏-ハイライト-色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-highlight-color)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃FFFFFF」です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`"＃FFFFFF"`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1738,14 +1714,14 @@ hillshadeスタイル層は、クライアント側のデジタル標高モデ�
 
 ### [陰影起伏-照明-アンカー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-illumination-anchor)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「マップ」、「ビューポート」のいずれか。 デフォルトは「マップ」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"map"`,`"viewport"`のいずれか。 デフォルトは`"map"`です。
 
 マップを回転させたときの光源の方向。
 
-"map"：
+`"map"`：
 陰影起伏の照明は北方向を基準にしています。
 
-"viewport"：
+`"viewport"`：
 陰影起伏の照明は、ビューポートの上部を基準にしています。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1754,9 +1730,9 @@ hillshadeスタイル層は、クライアント側のデジタル標高モデ�
 
 ### [陰影起伏-照明-方向](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-illumination-direction)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から359までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは335です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`359`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。デフォルトは`335`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。
 
-hillshade-illumination-anchorがビューポートに設定されている場合はビューポートの上部として0を使用し、hillshade-illumination-anchorがmapに設定されている場合は真北で、ヒルシェーディングを生成するために使用される光源の方向。
+`hillshade-illumination-anchor`が`viewport`に設定されている場合はビューポートの上部として0を使用し、`hillshade-illumination-anchor`が`map`に設定されている場合は真北で、ヒルシェーディングを生成するために使用される光源の方向。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1764,7 +1740,7 @@ hillshade-illumination-anchorがビューポートに設定されている場合
 
 ### [陰影起伏の色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-hillshade-hillshade-shadow-color)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「＃000000」です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`"＃000000"`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 光源とは反対側の領域のシェーディングカラー。
 
@@ -1774,14 +1750,14 @@ hillshade-illumination-anchorがビューポートに設定されている場合
 
 ### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"visible"`,`"none"`のいずれか。 デフォルトは`"visible"`です。
 
 このレイヤーが表示されるかどうか。
 
-"visible"：
+`"visible"`：
 レイヤーが表示されます。
 
-"none"：
+`"none"`：
 レイヤーは表示されていません。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1790,11 +1766,11 @@ hillshade-illumination-anchorがビューポートに設定されている場合
 
 ## [空](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#sky)
 
-skyスタイルレイヤーは、マップ全体を含む定型化された球形のドームをレンダリングし、すべてのレイヤーの背後に自動的にレンダリングされます。これを使用して、地平線の上の領域を、特定の時刻を表すシミュレートされた空、または定型化されたカスタムグラデーションで埋めることができます。
+`sky`スタイルレイヤーは、マップ全体を含む定型化された球形のドームをレンダリングし、すべてのレイヤーの背後に自動的にレンダリングされます。これを使用して、地平線の上の領域を、特定の時刻を表すシミュレートされた空、または定型化されたカスタムグラデーションで埋めることができます。
 
 ### [空-大気-色](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-atmosphere-color)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「white」です。 スカイタイプは「atmosphere」である必要があります。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`"white"`です。 スカイタイプは`"atmosphere"`である必要があります。
 
 主な大気散乱係数を微調整するために使用される色。白を使用すると、デフォルトの係数が適用され、大気に自然な青色が与えられます。この色は、散乱中に対応する波長がどの程度表されるかに影響します。アルファチャネルは、大気の密度を表します。最大密度は1、密度は0です。
 
@@ -1804,7 +1780,7 @@ skyスタイルレイヤーは、マップ全体を含む定型化された球�
 
 ### [空-大気-ハローカラー](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-atmosphere-halo-color)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは「white」です。 スカイタイプは「atmosphere」である必要があります。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`"white"`です。 スカイタイプは`"atmosphere"`である必要があります。
 
 大気の太陽の光輪に適用される色。アルファチャネルは、大気の空のレイヤーで太陽のハローがどれだけ強く表現されているかを表します。
 
@@ -1814,7 +1790,7 @@ skyスタイルレイヤーは、マップ全体を含む定型化された球�
 
 ### [空-大気-太陽](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-atmosphere-sun)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。00から360180までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。度単位。スカイタイプは「atmosphere」である必要があります。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`00`から`360180`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。度単位。スカイタイプは`"atmosphere"`である必要があります。
 
 太陽の中心の位置「方位角、p極角」。方位角は、北緯0度を基準にした太陽の位置を示し、度は時計回りに進みます。極角は太陽の高さを示します。ここで、0°は真上、天頂、90°は地平線です。このプロパティを省略すると、太陽の中心はライトの位置から直接継承されます。
 
@@ -1824,7 +1800,7 @@ skyスタイルレイヤーは、マップ全体を含む定型化された球�
 
 ### [空-大気-太陽の強度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-atmosphere-sun-intensity)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から100までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは10です。スカイタイプは「atmosphere」である必要があります。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`100`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`10`です。スカイタイプは`"atmosphere"`である必要があります。
 
 大気中の光源としての太陽の強度（0から100までのスケール）。値を大きくすると空が明るくなります。
 
@@ -1834,9 +1810,9 @@ skyスタイルレイヤーは、マップ全体を含む定型化された球�
 
 ### [空のグラデーション](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-gradient)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは"interpolate"、"linear"、"sky-radial-progress"、0.8、 "＃87ceeb"、1、 "white"です。 スカイタイプは「gradient」である必要があります。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[色](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#color)。デフォルトは`["interpolate",["linear"],["sky-radial-progress"],0.8,"#87ceeb",1,"white"]`です。 スカイタイプは`gradient`である必要があります。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。
 
-空を着色するための放射状のカラーグラデーションを定義します。 色の値は、sky-radial-progressを使用した式で補間できます。 内挿の範囲[0、1]は、sky-gradient-centerで指定された位置を中心とする「0、sky-gradient-radius」の半径距離（度単位）をカバーします。
+空を着色するための放射状のカラーグラデーションを定義します。 色の値は、`sky-radial-progress`を使用した式で補間できます。 内挿の範囲[0、1]は、`sky-gradient-center`で指定された位置を中心とする[0、`sky-gradient-radius`]の半径距離（度単位）をカバーします。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1845,7 +1821,7 @@ skyスタイルレイヤーは、マップ全体を含む定型化された球�
 
 ### [空のグラデーションセンター](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-gradient-center)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。00から360180までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。デフォルトは「0,0」です。スカイタイプは「gradient」である必要があります。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`00`から`360180`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)の[配列](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#array)。デフォルトは`[0,0]`です。スカイタイプは`"gradient"`である必要があります。
 
 グラデーションの中心の位置「方位角、p極角」。方位角は、北に0度を基準にしたグラデーションの中心の位置を示します。ここで、度は時計回りに進みます。極角は、グラデーションの中心の高さを示します。ここで、0°は真上、天頂、90°は地平線です。
 
@@ -1855,9 +1831,9 @@ skyスタイルレイヤーは、マップ全体を含む定型化された球�
 
 ### [空のグラデーション半径](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-gradient-radius)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から180までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは90です。スカイタイプは「atmosphere」である必要があります。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`180`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`90`です。スカイタイプは`gradient`である必要があります。
 
-空のグラデーションの中心からグラデーションが伸びるまでの角距離（度単位で測定）。 値が180の場合、グラデーションは空のグラデーションの中心から反対方向に折り返されます。
+`sky-gradient-center`からグラデーションが伸びるまでの角距離（度単位で測定）。 値が180の場合、グラデーションは`sky-gradient-center`から反対方向に折り返されます。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1865,7 +1841,7 @@ skyスタイルレイヤーは、マップ全体を含む定型化された球�
 
 ### [空の不透明度](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-opacity)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`補間`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)式をサポートします。移行可能。
 
 空のレイヤー全体の不透明度。
 
@@ -1875,15 +1851,15 @@ skyスタイルレイヤーは、マップ全体を含む定型化された球�
 
 ### [スカイタイプ](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-sky-sky-type)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「gradient」、「atmosphere」のいずれか。 デフォルトは「atmosphere」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"gradient"`,`"atmosphere"`のいずれか。 デフォルトは`"atmosphere"`です。
 
 空のタイプ。
 
-"gradient"：
-sky-gradient-radiusとsky-gradientで構成できるグラデーションで空をレンダリングします。
+`"gradient"`：
+`sky-gradient-radius`と`sky-gradient`で構成できるグラデーションで空をレンダリングします。
 
-"atmosphere"：
-シミュレートされた大気散乱アルゴリズムを使用して空をレンダリングします。太陽の方向を光の位置に関連付けるか、sky-atmosphere-sunを介して明示的に設定できます。
+`"atmosphere"`：
+シミュレートされた大気散乱アルゴリズムを使用して空をレンダリングします。太陽の方向を光の位置に関連付けるか、`sky-atmosphere-sun`を介して明示的に設定できます。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
 | ------------ | ------------ | ----------- | -------- | --------- |
@@ -1891,14 +1867,14 @@ sky-gradient-radiusとsky-gradientで構成できるグラデーションで空�
 
 ### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。「表示」、「なし」のいずれか。 デフォルトは「表示」です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"visible"`,`"none"`のいずれか。 デフォルトは`"visible"`です。
 
 このレイヤーが表示されるかどうか。
 
-"visible"：
+`"visible"`：
 レイヤーが表示されます。
 
-"none"：
+`"none"`：
 レイヤーは表示されていません。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
