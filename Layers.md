@@ -1211,14 +1211,14 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [視認性](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-visibility)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"visible"`,"none"のいずれか。 デフォルトは`"visible"`です。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。オプションの[列挙型](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#enum)。`"visible"`,`"none"`のいずれか。 デフォルトは`"visible"`です。
 
 このレイヤーが表示されるかどうか。
 
 `"visible"`：
 レイヤーが表示されます。
 
-"none"：
+`"none"`：
 レイヤーは表示されていません。
 
 | SDK サポート  | Mapbox GL JS | Android SDK | iOS SDK  | macOS SDK |
@@ -1227,11 +1227,11 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ## [ラスター](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#raster)
 
-スタイルレイヤーは、マップ上にrasterラスタータイルをレンダリングします。ラスターレイヤーを使用して、ラスタータイルのカラーパラメーターを構成できます。
+スタイルレイヤーは、マップ上に`raster`ラスタータイルをレンダリングします。ラスターレイヤーを使用して、ラスタータイルのカラーパラメーターを構成できます。
 
 ### [ラスター-明るさ-最大](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-brightness-max)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは1です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`1`です。[`補間式`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
 画像の明るさを増減します。値は最大輝度です。
 
@@ -1241,7 +1241,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスター-明るさ-最小](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-brightness-min)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。0から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは0です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`0`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`0`です。[`補間式`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
 画像の明るさを増減します。値は最小輝度です。
 
@@ -1251,7 +1251,7 @@ trueの場合、テキストが他のシンボルと衝突し、アイコンが�
 
 ### [ラスター-コントラスト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-raster-raster-contrast)
 
-[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。-1から1までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは0です。[補間式](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
+[ペイント](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#paint-property)プロパティ。`-1`から`1`までのオプションの[数値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#number)。 デフォルトは`0`です。[`補間式`](https://docs.mapbox.com/mapbox-gl-js/style-spec/expressions/#interpolate)をサポートします。移行可能。
 
 画像のコントラストを増減します。
 
