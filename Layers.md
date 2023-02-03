@@ -457,7 +457,7 @@ DEMデータに基づくクライアントサイドのヒルシェード視覚�
 | 基本機能 | >= 0.10.0    | >= 2.0.1    | >= 2.0.0 | >= 0.1.0  |
 
 ## [シンボル](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#symbol)
-symbolスタイル層がポイントで、マップ上のラインに沿ってアイコンとテキストラベルをレンダリングします。シンボルレイヤーを使用して、ベクタータイルのフィーチャのラベルの外観を構成できます。
+`symbol`スタイル層がポイントで、マップ上のラインに沿ってアイコンとテキストラベルをレンダリングします。シンボルレイヤーを使用して、ベクタータイルのフィーチャのラベルの外観を構成できます。
 
 ### [アイコン-allow-overlap](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-symbol-icon-allow-overlap)
 [レイアウト](https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/#layout-property)プロパティ。オプションの[ブルー値](https://docs.mapbox.com/mapbox-gl-js/style-spec/types/#boolean)。デフォルトは`false`です。 アイコン画像が必要です。
