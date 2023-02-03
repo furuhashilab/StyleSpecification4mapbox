@@ -1,7 +1,7 @@
 ## 日本語
 
 # レイヤー
-スタイルの`layers`プロパティには、そのスタイルで使用できるすべてのレイヤーが一覧表示されます。レイヤーの種類は`type`属性で指定し、background、fill、line、symbol、raster、circle、fill-extrusion、heatmap、hillsshade、sky のいずれかを指定する必要があります。
+スタイルの`layers`プロパティには、そのスタイルで使用できるすべてのレイヤーが一覧表示されます。レイヤーの種類は`"type"`属性で指定し、background、fill、line、symbol、raster、circle、fill-extrusion、heatmap、hillsshade、sky のいずれかを指定する必要があります。
 
 backgroundまたはskyタイプのレイヤーを除いて、各レイヤーはソースを参照する必要があります。レイヤーは[ソース](https://docs.mapbox.com/help/glossary/source/)から取得したデータを受け取り、オプションでフィーチャーをフィルタリングし、それらのフィーチャーがどのようにスタイリングされるかを定義します。
 
